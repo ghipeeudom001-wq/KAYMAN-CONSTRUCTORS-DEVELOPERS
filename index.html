@@ -1,1 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KAYMAN CONSTRUCTORS & DEVELOPERS</title>
+<meta name="description" content="KAYMAN CONSTRUCTORS & DEVELOPERS">
+<style>
+:root{--gold:#d8ad55;--gold2:#f2cf7b;--bg:#070707;--bg2:#101010;--card:#151515;--text:#f5f5f5;--muted:#999;--line:#262626;--green:#25d366;--red:#ef4444}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+a{text-decoration:none;color:inherit}
+button,input,textarea,select{font:inherit}
+img{max-width:100%;display:block}
+.container{width:min(1180px,92%);margin:auto}
 
+header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(5,5,5,.9);backdrop-filter:blur(15px);border-bottom:1px solid var(--line)}
+.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:1px}
+.logoMark{width:42px;height:42px;border:2px solid var(--gold);display:grid;place-items:center;color:var(--gold);transform:rotate(45deg)}
+.logoMark span{transform:rotate(-45deg)}
+.logo small{display:block;color:var(--gold);font-size:8px;letter-spacing:2px}
+.navlinks{display:flex;gap:24px;align-items:center}
+.navlinks a{font-size:14px;color:#ddd}
+.navlinks a:hover{color:var(--gold)}
+.adminLink{border:1px solid var(--gold);padding:8px 13px;border-radius:5px;color:var(--gold)!important}
+.menu{display:none;background:none;border:0;color:#fff;font-size:27px}
+
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;background:linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.5),rgba(0,0,0,.82)),url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2000&q=85") center/cover}
+.heroContent{padding-top:80px;max-width:800px}
+.eyebrow{color:var(--gold);font-size:12px;letter-spacing:4px;text-transform:uppercase;font-weight:bold;margin-bottom:15px}
+.hero h1{font-size:clamp(42px,7vw,82px);line-height:.98;letter-spacing:-3px;margin-bottom:25px}
+.hero h1 span,.gold{color:var(--gold)}
+.hero p{font-size:18px;color:#ddd;max-width:650px;margin-bottom:30px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
+.btn{border:0;padding:13px 20px;border-radius:5px;font-weight:bold;cursor:pointer;display:inline-flex;justify-content:center;align-items:center;gap:8px}
+.goldBtn{background:var(--gold);color:#080808}
+.goldBtn:hover{background:var(--gold2)}
+.outlineBtn{background:transparent;border:1px solid #555;color:#fff}
+.whatsappBtn{background:var(--green);color:#05200c}
+
+section{padding:90px 0}
+.stats{padding:35px 0;background:#0d0d0d;border-block:1px solid var(--line)}
+.statsGrid{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{text-align:center}
+.stat strong{font-size:36px;color:var(--gold);display:block}
+.stat span{font-size:12px;color:#999;text-transform:uppercase}
+
+.sectionHead{margin-bottom:40px}
+.sectionHead.center{text-align:center}
+.sectionHead h2{font-size:clamp(32px,5vw,50px);line-height:1.05}
+.sectionHead p{color:var(--muted);max-width:650px;margin-top:12px}
+.center p{margin-inline:auto}
+
+.aboutGrid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.aboutImage{height:500px;border-radius:10px;background:center/cover url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=85");border:1px solid var(--line)}
+.aboutCopy p{color:#bbb;margin-bottom:17px}
+.check{display:flex;gap:10px;margin:10px 0}.check b{color:var(--gold)}
+
+.services{background:#0b0b0b}
+.serviceGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.service{background:var(--card);border:1px solid var(--line);padding:28px;border-radius:8px;transition:.3s}
+.service:hover{transform:translateY(-5px);border-color:#80672e}
+.icon{width:50px;height:50px;border:1px solid var(--gold);color:var(--gold);display:grid;place-items:center;font-size:22px;margin-bottom:20px;border-radius:5px}
+.service p{font-size:14px;color:#999;margin-top:8px}
+
+.projectGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.project{height:330px;position:relative;overflow:hidden;border-radius:9px;border:1px solid var(--line);background:#111}
+.project img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.project:hover img{transform:scale(1.07)}
+.projectInfo{position:absolute;bottom:0;left:0;right:0;padding:30px 20px 18px;background:linear-gradient(transparent,rgba(0,0,0,.95))}
+.projectInfo small{color:var(--gold)}
+
+.why{background:linear-gradient(90deg,rgba(0,0,0,.9),rgba(0,0,0,.7)),url("https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=1800&q=85") center/cover fixed}
+.whyGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.whyCard{background:rgba(10,10,10,.8);border:1px solid var(--line);padding:25px;border-radius:7px}
+.whyCard strong{color:var(--gold);display:block;margin-bottom:7px}
+.whyCard p{font-size:13px;color:#aaa}
+
+.cta{background:var(--gold);color:#080808;padding:55px 0}
+.ctaInner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.cta h2{font-size:clamp(28px,4vw,45px);line-height:1}
+.darkBtn{background:#080808;color:#fff}
+
+.contact{background:#0b0b0b}
+.contactGrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px}
+.contactCard,.formCard{background:#151515;border:1px solid var(--line);padding:28px;border-radius:8px}
+.contactItem{padding:16px 0;border-bottom:1px solid var(--line)}
+.contactItem small{display:block;color:var(--gold)}
+.contactItem a:hover{color:var(--gold)}
+.formGrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{margin-bottom:14px}.field.full{grid-column:1/-1}
+.field label{display:block;font-size:12px;color:#aaa;margin-bottom:5px}
+.field input,.field textarea,.field select,.adminInput{width:100%;background:#090909;color:#fff;border:1px solid var(--line);padding:13px;border-radius:5px;outline:none}
+.field textarea{min-height:130px;resize:vertical}
+.field input:focus,.field textarea:focus,.field select:focus,.adminInput:focus{border-color:var(--gold)}
+
+footer{padding:35px 0;border-top:1px solid var(--line);background:#050505}
+.footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.footer p{font-size:12px;color:#777}
+.footerLinks{display:flex;gap:18px;font-size:13px}
+
+.floatWA,.chatButton{position:fixed;right:20px;border:0;z-index:900;cursor:pointer;border-radius:50%;display:grid;place-items:center}
+.floatWA{bottom:20px;width:58px;height:58px;background:var(--green);font-size:25px;color:#06210d}
+.chatButton{bottom:90px;width:58px;height:58px;background:var(--gold);font-size:23px}
+
+.chatbox{display:none;position:fixed;right:20px;bottom:160px;width:min(370px,calc(100% - 30px));height:500px;background:#111;border:1px solid var(--gold);border-radius:12px;z-index:1500;overflow:hidden}
+.chatbox.open{display:flex;flex-direction:column}
+.chatHead{padding:15px;background:#181818;border-bottom:1px solid var(--line);display:flex;justify-content:space-between}
+.chatHead strong{color:var(--gold)}
+.chatClose{background:none;border:0;color:#fff;font-size:20px}
+.chatMessages{flex:1;padding:15px;overflow:auto}
+.message{max-width:85%;padding:9px 12px;border-radius:10px;margin-bottom:9px;font-size:13px}
+.bot{background:#202020}.user{background:var(--gold);color:#111;margin-left:auto}
+.chatInput{display:flex;border-top:1px solid var(--line)}
+.chatInput input{flex:1;background:#080808;color:#fff;border:0;padding:13px;outline:0}
+.chatInput button{width:55px;background:var(--gold);border:0}
+
+/* ADMIN */
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);z-index:3000;padding:15px;overflow:auto}
+.modal.show{display:block}
+.adminWrap{max-width:1250px;margin:auto;background:#0c0c0c;border:1px solid var(--line);border-radius:10px;min-height:calc(100vh - 30px);overflow:hidden}
+.login{max-width:430px;margin:100px auto;background:#151515;padding:32px;border:1px solid var(--line);border-radius:9px}
+.login h2{color:var(--gold);margin-bottom:7px}.login p{font-size:13px;color:#888;margin-bottom:18px}
+.adminHeader{padding:17px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px}
+.adminHeader strong{color:var(--gold)}
+.adminBody{display:grid;grid-template-columns:220px 1fr;min-height:750px}
+.sidebar{background:#101010;border-right:1px solid var(--line);padding:12px}
+.tab{width:100%;text-align:left;background:none;border:0;color:#999;padding:12px;border-radius:5px;cursor:pointer;margin-bottom:3px}
+.tab:hover,.tab.active{background:#1d1d1d;color:var(--gold)}
+.adminContent{padding:25px}
+.panel{display:none}.panel.active{display:block}
+.dashboard{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:20px}
+.dash{background:#151515;border:1px solid var(--line);padding:18px;border-radius:7px}
+.dash small{color:#888}.dash strong{display:block;color:var(--gold);font-size:29px}
+.adminBox{background:#151515;border:1px solid var(--line);padding:20px;border-radius:8px;margin-bottom:18px}
+.adminBox h3{color:var(--gold);margin-bottom:15px}
+.adminInput{margin-bottom:10px}
+.notice{font-size:12px;color:#777;margin-top:8px}
+.danger{background:#391313!important;color:#ffaaaa!important;border:1px solid #662222!important}
+
+.mediaToolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}
+.mediaGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.mediaCard{background:#0c0c0c;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.mediaCard img{height:190px;width:100%;object-fit:cover}
+.mediaBody{padding:13px}
+.mediaBody strong{display:block;margin-bottom:5px}
+.mediaBody small{color:#888}
+.mediaActions{display:flex;gap:7px;margin-top:12px}
+.mediaActions button{flex:1;padding:8px;border-radius:4px;border:1px solid var(--line);background:#191919;color:#fff;cursor:pointer;font-size:12px}
+.mediaActions button:hover{border-color:var(--gold);color:var(--gold)}
+
+.projectAdminGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.projectAdmin{background:#0c0c0c;border:1px solid var(--line);padding:10px;border-radius:7px}
+.projectAdmin img{height:130px;width:100%;object-fit:cover;border-radius:5px}
+.tableWrap{overflow:auto}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th,td{padding:10px 7px;border-bottom:1px solid var(--line);text-align:left}
+th{color:var(--gold)}
+
+.hidden{display:none!important}
+
+@media(max-width:900px){
+.navlinks{display:none;position:absolute;top:78px;left:0;right:0;background:#080808;padding:15px;flex-direction:column;align-items:stretch}
+.navlinks.open{display:flex}.menu{display:block}
+.statsGrid{grid-template-columns:1fr 1fr}.aboutGrid,.contactGrid{grid-template-columns:1fr}
+.serviceGrid,.projectGrid{grid-template-columns:1fr 1fr}
+.whyGrid{grid-template-columns:1fr 1fr}
+.adminBody{grid-template-columns:1fr}.sidebar{display:flex;overflow:auto;border-right:0;border-bottom:1px solid var(--line)}
+.tab{min-width:max-content;width:auto}
+.dashboard{grid-template-columns:1fr 1fr}
+.mediaGrid,.projectAdminGrid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+section{padding:70px 0}.hero h1{letter-spacing:-2px}.hero p{font-size:15px}
+.serviceGrid,.projectGrid,.whyGrid,.dashboard,.mediaGrid,.projectAdminGrid{grid-template-columns:1fr}
+.aboutImage{height:380px}.ctaInner{flex-direction:column;align-items:flex-start}
+.formGrid{grid-template-columns:1fr}.field.full{grid-column:auto}
+.adminContent{padding:13px}.modal{padding:5px}
+.adminWrap{min-height:calc(100vh - 10px)}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+<a href="#home" class="logo">
+<div class="logoMark"><span>K</span></div>
+<div>KAYMAN<small>CONSTRUCTORS & DEVELOPERS</small></div>
+</a>
+<nav class="navlinks" id="navlinks">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+<a href="#" class="adminLink" onclick="openAdmin(event)">ADMIN</a>
+</nav>
+<button class="menu" onclick="toggleMenu()">☰</button>
+</div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+<div class="container heroContent">
+<div class="eyebrow">Construction • Development • Engineering</div>
+<h1 id="heroTitle">We Build <span>What Matters.</span></h1>
+<p id="heroDesc">KAYMAN CONSTRUCTORS & DEVELOPERS delivers construction and development solutions designed around quality, durability, functionality and long-term value.</p>
+<div class="buttons">
+<a class="btn goldBtn" href="#contact">Request a Quote</a>
+<a class="btn whatsappBtn" href="https://wa.me/2348029181035" target="_blank">WhatsApp Us</a>
+<a class="btn outlineBtn" href="#projects">View Projects</a>
+</div>
+</div>
+</section>
+
+<section class="stats">
+<div class="container statsGrid">
+<div class="stat"><strong>01</strong><span>Construction Partner</span></div>
+<div class="stat"><strong>100%</strong><span>Project Focus</span></div>
+<div class="stat"><strong>24/7</strong><span>Online Enquiries</span></div>
+<div class="stat"><strong>∞</strong><span>Possibilities</span></div>
+</div>
+</section>
+
+<section id="about">
+<div class="container aboutGrid">
+<div class="aboutImage" id="aboutImage"></div>
+<div class="aboutCopy">
+<div class="sectionHead">
+<div class="eyebrow">Who We Are</div>
+<h2>Built Around <span class="gold">Quality.</span></h2>
+</div>
+<p>KAYMAN CONSTRUCTORS & DEVELOPERS is a modern construction and property development company focused on delivering practical, durable and professionally managed projects.</p>
+<p>From planning through execution, our approach is centred on communication, attention to detail and solutions that create lasting value.</p>
+<div>
+<div class="check"><b>✓</b> Professional project planning</div>
+<div class="check"><b>✓</b> Quality-focused construction</div>
+<div class="check"><b>✓</b> Clear client communication</div>
+<div class="check"><b>✓</b> Long-term value</div>
+</div>
+<a class="btn goldBtn" href="#contact" style="margin-top:20px">Discuss Your Project</a>
+</div>
+</div>
+</section>
+
+<section class="services" id="services">
+<div class="container">
+<div class="sectionHead center">
+<div class="eyebrow">What We Do</div>
+<h2>Our <span class="gold">Services</span></h2>
+<p>Construction and development services tailored to the requirements of each project.</p>
+</div>
+<div class="serviceGrid">
+<div class="service"><div class="icon">⌂</div><h3>Building Construction</h3><p>Residential and commercial building construction.</p></div>
+<div class="service"><div class="icon">▦</div><h3>Property Development</h3><p>Development solutions from concept through delivery.</p></div>
+<div class="service"><div class="icon">⚙</div><h3>Civil Engineering</h3><p>Infrastructure and civil works for project requirements.</p></div>
+<div class="service"><div class="icon">▤</div><h3>Project Management</h3><p>Structured coordination for organised project execution.</p></div>
+<div class="service"><div class="icon">◇</div><h3>Renovation & Remodeling</h3><p>Upgrade and transformation of existing spaces.</p></div>
+<div class="service"><div class="icon">⌖</div><h3>Consultation</h3><p>Discuss your proposed construction or development project.</p></div>
+</div>
+</div>
+</section>
+
+<section id="projects">
+<div class="container">
+<div class="sectionHead center">
+<div class="eyebrow">Selected Work</div>
+<h2>Project <span class="gold">Showcase</span></h2>
+<p>Projects can be added, replaced and managed directly from the admin panel.</p>
+</div>
+<div class="projectGrid" id="projectGrid"></div>
+</div>
+</section>
+
+<section class="why">
+<div class="container">
+<div class="sectionHead center">
+<div class="eyebrow">The KAYMAN Approach</div>
+<h2>Why Work <span class="gold">With Us?</span></h2>
+</div>
+<div class="whyGrid">
+<div class="whyCard"><strong>Quality Focus</strong><p>Attention to construction quality and project requirements.</p></div>
+<div class="whyCard"><strong>Clear Communication</strong><p>Customers can reach the company directly.</p></div>
+<div class="whyCard"><strong>Project Mindset</strong><p>Each project is approached around its individual objectives.</p></div>
+<div class="whyCard"><strong>Long-Term Value</strong><p>Solutions are designed around durability and usability.</p></div>
+</div>
+</div>
+</section>
+
+<section class="cta">
+<div class="container ctaInner">
+<div><h2>Have a Construction Project?</h2><p>Tell KAYMAN what you want to build.</p></div>
+<a class="btn darkBtn" href="#contact">Start an Enquiry</a>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="container">
+<div class="sectionHead">
+<div class="eyebrow">Contact KAYMAN</div>
+<h2>Let's Discuss <span class="gold">Your Project.</span></h2>
+<p>Send an enquiry and the business can follow up with you.</p>
+</div>
+
+<div class="contactGrid">
+<div class="contactCard">
+<div class="contactItem"><small>PHONE / WHATSAPP</small><a href="tel:+2348029181035">0802 918 1035</a></div>
+<div class="contactItem"><small>WHATSAPP</small><a href="https://wa.me/2348029181035" target="_blank">Chat with KAYMAN</a></div>
+<div class="contactItem"><small>LOCATION</small><span id="locationText">Uyo, Akwa Ibom, Nigeria</span></div>
+<div class="contactItem"><small>BUSINESS HOURS</small><span>Monday – Saturday</span></div>
+</div>
+
+<div class="formCard">
+<form id="leadForm">
+<div class="formGrid">
+<div class="field"><label>Full Name</label><input id="leadName" required></div>
+<div class="field"><label>Phone / WhatsApp</label><input id="leadPhone" required></div>
+<div class="field"><label>Email</label><input id="leadEmail" type="email"></div>
+<div class="field"><label>Project Type</label>
+<select id="leadType">
+<option>Building Construction</option>
+<option>Property Development</option>
+<option>Civil Engineering</option>
+<option>Renovation / Remodeling</option>
+<option>Project Management</option>
+<option>Consultation</option>
+</select>
+</div>
+<div class="field full"><label>Project Details</label><textarea id="leadMessage" required></textarea></div>
+</div>
+<button class="btn goldBtn" type="submit">Send Enquiry</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="container footer">
+<div><strong>KAYMAN CONSTRUCTORS & DEVELOPERS</strong><p>Construction • Development • Engineering</p><p>© <span id="year"></span> KAYMAN</p></div>
+<div class="footerLinks"><a href="#home">Home</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#contact">Contact</a><a href="#" onclick="openAdmin(event)">Admin</a></div>
+</div>
+</footer>
+
+<a class="floatWA" href="https://wa.me/2348029181035" target="_blank">☘</a>
+<button class="chatButton" onclick="toggleChat()">✦</button>
+
+<div class="chatbox" id="chatbox">
+<div class="chatHead"><strong>KAYMAN Assistant</strong><button class="chatClose" onclick="toggleChat()">×</button></div>
+<div class="chatMessages" id="chatMessages"><div class="message bot">Hello! I can help with KAYMAN's services, construction enquiries, quotations and contact information.</div></div>
+<div class="chatInput"><input id="chatInput" placeholder="Ask about KAYMAN..." onkeydown="if(event.key==='Enter')sendChat()"><button onclick="sendChat()">➤</button></div>
+</div>
+
+
+<!-- ADMIN -->
+
+<div class="modal" id="adminModal">
+<div class="adminWrap">
+
+<div id="adminLogin">
+<div class="login">
+<h2>KAYMAN ADMIN</h2>
+<p>Owner control panel. Enter your administrator password.</p>
+<input class="adminInput" id="adminPassword" type="password" placeholder="Administrator password" onkeydown="if(event.key==='Enter')loginAdmin()">
+<button class="btn goldBtn" style="width:100%" onclick="loginAdmin()">Login</button>
+<button class="btn outlineBtn" style="width:100%;margin-top:10px" onclick="closeAdmin()">Close</button>
+<div id="loginError" style="display:none;color:#ff7777;margin-top:10px">Incorrect password.</div>
+</div>
+</div>
+
+<div id="adminDashboard" class="hidden">
+
+<div class="adminHeader">
+<div><strong>KAYMAN CONTROL CENTER</strong><div style="font-size:12px;color:#777">Website management</div></div>
+<div class="buttons"><button class="btn outlineBtn" onclick="closeAdmin()">Close</button><button class="btn danger" onclick="logoutAdmin()">Logout</button></div>
+</div>
+
+<div class="adminBody">
+
+<aside class="sidebar">
+<button class="tab active" onclick="panel('overview',this)">Overview</button>
+<button class="tab" onclick="panel('media',this)">🖼 Media / Images</button>
+<button class="tab" onclick="panel('content',this)">Website Content</button>
+<button class="tab" onclick="panel('projects',this)">Projects</button>
+<button class="tab" onclick="panel('leads',this)">Leads</button>
+<button class="tab" onclick="panel('chats',this)">Chat Logs</button>
+<button class="tab" onclick="panel('settings',this)">Settings</button>
+</aside>
+
+<div class="adminContent">
+
+<!-- OVERVIEW -->
+<section class="panel active" id="panel-overview">
+<div class="dashboard">
+<div class="dash"><small>Website Visits</small><strong id="dashVisits">0</strong></div>
+<div class="dash"><small>Leads</small><strong id="dashLeads">0</strong></div>
+<div class="dash"><small>Chats</small><strong id="dashChats">0</strong></div>
+<div class="dash"><small>Images</small><strong id="dashImages">0</strong></div>
+</div>
+
+<div class="adminBox">
+<h3>Quick Actions</h3>
+<div class="buttons">
+<button class="btn goldBtn" onclick="openPanel('media')">Manage Images</button>
+<button class="btn outlineBtn" onclick="openPanel('content')">Edit Website</button>
+<button class="btn outlineBtn" onclick="openPanel('projects')">Manage Projects</button>
+<button class="btn outlineBtn" onclick="openPanel('leads')">View Leads</button>
+</div>
+</div>
+</section>
+
+
+<!-- MEDIA MANAGER -->
+<section class="panel" id="panel-media">
+
+<div class="adminBox">
+<h3>🖼 Website Image Manager</h3>
+
+<p style="color:#aaa;font-size:13px;margin-bottom:18px">
+Here you can replace the main website images or add as many additional
+images as you want. Images uploaded from your phone are stored in this
+browser for the demo.
+</p>
+
+<div class="mediaToolbar">
+<button class="btn goldBtn" onclick="document.getElementById('heroUpload').click()">Replace Hero Image</button>
+<input id="heroUpload" type="file" accept="image/*" hidden onchange="replaceSpecialImage('hero',this.files[0])">
+
+<button class="btn goldBtn" onclick="document.getElementById('aboutUpload').click()">Replace About Image</button>
+<input id="aboutUpload" type="file" accept="image/*" hidden onchange="replaceSpecialImage('about',this.files[0])">
+
+<button class="btn outlineBtn" onclick="document.getElementById('newMediaUpload').click()">+ Add New Image</button>
+<input id="newMediaUpload" type="file" accept="image/*" multiple hidden onchange="addMediaImages(this.files)">
+</div>
+
+<div class="adminBox" style="background:#0d0d0d">
+<h3>Current Main Images</h3>
+
+<div class="mediaGrid" id="specialImages"></div>
+</div>
+
+</div>
+
+<div class="adminBox">
+<h3>All Uploaded Images</h3>
+<p class="notice">You can upload multiple images at once. There is no fixed number of images.</p>
+<div class="mediaGrid" id="mediaGrid"></div>
+</div>
+
+</section>
+
+
+<!-- CONTENT -->
+<section class="panel" id="panel-content">
+<div class="adminBox">
+<h3>Website Content</h3>
+<label>Company Name</label>
+<input class="adminInput" id="editName">
+<label>Hero Title</label>
+<input class="adminInput" id="editHero">
+<label>Hero Description</label>
+<textarea class="adminInput" id="editDesc"></textarea>
+<label>Phone</label>
+<input class="adminInput" id="editPhone">
+<label>Location</label>
+<input class="adminInput" id="editLocation">
+<button class="btn goldBtn" onclick="saveContent()">Save Changes</button>
+</div>
+</section>
+
+
+<!-- PROJECTS -->
+<section class="panel" id="panel-projects">
+<div class="adminBox">
+<h3>Add Project</h3>
+<input class="adminInput" id="pName" placeholder="Project name">
+<input class="adminInput" id="pCategory" placeholder="Category">
+<textarea class="adminInput" id="pDescription" placeholder="Project description"></textarea>
+
+<label style="display:block;color:#aaa;font-size:12px;margin-bottom:5px">Project image</label>
+<input class="adminInput" type="file" id="pImage" accept="image/*">
+
+<button class="btn goldBtn" onclick="addProject()">Add Project</button>
+</div>
+
+<div class="adminBox">
+<h3>Existing Projects</h3>
+<div class="projectAdminGrid" id="projectAdminGrid"></div>
+</div>
+</section>
+
+
+<!-- LEADS -->
+<section class="panel" id="panel-leads">
+<div class="adminBox">
+<div style="display:flex;justify-content:space-between;gap:10px">
+<h3>Customer Leads</h3>
+<button class="btn danger" onclick="clearLeads()">Clear All</button>
+</div>
+<div class="tableWrap"><table><thead><tr><th>Date</th><th>Name</th><th>Phone</th><th>Project</th><th>Message</th></tr></thead><tbody id="leadTable"></tbody></table></div>
+</div>
+</section>
+
+
+<!-- CHATS -->
+<section class="panel" id="panel-chats">
+<div class="adminBox">
+<div style="display:flex;justify-content:space-between;gap:10px">
+<h3>Chat Conversations</h3>
+<button class="btn danger" onclick="clearChats()">Clear All</button>
+</div>
+<div class="tableWrap"><table><thead><tr><th>Date</th><th>Visitor</th><th>Assistant</th></tr></thead><tbody id="chatTable"></tbody></table></div>
+</div>
+</section>
+
+
+<!-- SETTINGS -->
+<section class="panel" id="panel-settings">
+<div class="adminBox">
+<h3>Google Apps Script</h3>
+<p style="font-size:13px;color:#999;margin-bottom:12px">Paste your deployed Apps Script Web App URL here to send leads to Google Sheets.</p>
+<input class="adminInput" id="appsUrl" placeholder="https://script.google.com/macros/s/.../exec">
+<button class="btn goldBtn" onclick="saveApps()">Save URL</button>
+</div>
+
+<div class="adminBox">
+<h3>Administrator Password</h3>
+<p style="font-size:13px;color:#999;margin-bottom:12px">Change the demo password here.</p>
+<input class="adminInput" id="newPassword" type="password" placeholder="New admin password">
+<button class="btn goldBtn" onclick="changePassword()">Change Password</button>
+</div>
+
+<div class="adminBox">
+<h3>Data</h3>
+<button class="btn danger" onclick="resetData()">Reset Local Website Data</button>
+</div>
+</section>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<script>
+const STORE={
+ business:"kayman_business",
+ projects:"kayman_projects",
+ media:"kayman_media",
+ leads:"kayman_leads",
+ chats:"kayman_chats",
+ visits:"kayman_visits",
+ apps:"kayman_apps",
+ password:"kayman_password"
+};
+
+const DEFAULT={
+ name:"KAYMAN CONSTRUCTORS & DEVELOPERS",
+ hero:"We Build What Matters.",
+ desc:"KAYMAN CONSTRUCTORS & DEVELOPERS delivers construction and development solutions designed around quality, durability, functionality and long-term value.",
+ phone:"0802 918 1035",
+ location:"Uyo, Akwa Ibom, Nigeria",
+ heroImage:"https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2000&q=85",
+ aboutImage:"https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=85"
+};
+
+let business=JSON.parse(localStorage.getItem(STORE.business)||"null")||DEFAULT;
+
+let projects=JSON.parse(localStorage.getItem(STORE.projects)||"null")||[
+{id:1,name:"Modern Residential Development",category:"Residential",description:"Contemporary building concept focused on modern living.",image:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85"},
+{id:2,name:"Commercial Building Project",category:"Commercial",description:"Modern commercial construction concept.",image:"https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85"},
+{id:3,name:"Construction & Civil Works",category:"Civil Engineering",description:"Infrastructure and construction works.",image:"https://images.unsplash.com/photo-1590725140246-20acdee442be?auto=format&fit=crop&w=1200&q=85"}
+];
+
+let media=JSON.parse(localStorage.getItem(STORE.media)||"null")||[];
+
+let visits=Number(localStorage.getItem(STORE.visits)||0)+1;
+localStorage.setItem(STORE.visits,visits);
+
+function save(){
+localStorage.setItem(STORE.business,JSON.stringify(business));
+localStorage.setItem(STORE.projects,JSON.stringify(projects));
+localStorage.setItem(STORE.media,JSON.stringify(media));
+}
+
+function leads(){return JSON.parse(localStorage.getItem(STORE.leads)||"[]")}
+function chats(){return JSON.parse(localStorage.getItem(STORE.chats)||"[]")}
+function safe(x){
+return String(x??"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#039;");
+}
+
+function renderSite(){
+document.getElementById("heroTitle").innerHTML=safe(business.hero).replace(" "," <span>");
+document.getElementById("heroDesc").textContent=business.desc;
+document.getElementById("locationText").textContent=business.location;
+document.getElementById("aboutImage").style.backgroundImage=`url("${business.aboutImage}")`;
+
+document.querySelectorAll(".hero").forEach(x=>{
+x.style.backgroundImage=`linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.5),rgba(0,0,0,.82)),url("${business.heroImage}")`;
+});
+
+document.getElementById("projectGrid").innerHTML=projects.map(p=>`
+<article class="project">
+<img src="${safe(p.image)}" alt="${safe(p.name)}">
+<div class="projectInfo"><small>${safe(p.category)}</small><h3>${safe(p.name)}</h3></div>
+</article>`).join("");
+}
+
+function renderAdmin(){
+document.getElementById("dashVisits").textContent=visits;
+document.getElementById("dashLeads").textContent=leads().length;
+document.getElementById("dashChats").textContent=chats().length;
+document.getElementById("dashImages").textContent=media.length;
+
+document.getElementById("editName").value=business.name;
+document.getElementById("editHero").value=business.hero;
+document.getElementById("editDesc").value=business.desc;
+document.getElementById("editPhone").value=business.phone;
+document.getElementById("editLocation").value=business.location;
+document.getElementById("appsUrl").value=localStorage.getItem(STORE.apps)||"";
+
+renderSpecialImages();
+renderMedia();
+renderProjectAdmin();
+renderLeads();
+renderChats();
+}
+
+function toggleMenu(){document.getElementById("navlinks").classList.toggle("open")}
+
+function openAdmin(e){
+if(e)e.preventDefault();
+document.getElementById("adminModal").classList.add("show");
+document.getElementById("adminLogin").classList.remove("hidden");
+document.getElementById("adminDashboard").classList.add("hidden");
+}
+
+function closeAdmin(){document.getElementById("adminModal").classList.remove("show")}
+
+function loginAdmin(){
+let saved=localStorage.getItem(STORE.password)||"KAYMAN 2026";
+if(document.getElementById("adminPassword").value===saved){
+document.getElementById("adminLogin").classList.add("hidden");
+document.getElementById("adminDashboard").classList.remove("hidden");
+renderAdmin();
+}else document.getElementById("loginError").style.display="block";
+}
+
+function logoutAdmin(){
+document.getElementById("adminDashboard").classList.add("hidden");
+document.getElementById("adminLogin").classList.remove("hidden");
+}
+
+function panel(name,btn){
+document.querySelectorAll(".panel").forEach(x=>x.classList.remove("active"));
+document.getElementById("panel-"+name).classList.add("active");
+document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));
+if(btn)btn.classList.add("active");
+renderAdmin();
+}
+
+function openPanel(name){
+document.querySelectorAll(".panel").forEach(x=>x.classList.remove("active"));
+document.getElementById("panel-"+name).classList.add("active");
+renderAdmin();
+}
+
+
+/* IMAGE MANAGER */
+
+function fileToData(file,callback){
+if(!file)return;
+const reader=new FileReader();
+reader.onload=()=>callback(reader.result);
+reader.readAsDataURL(file);
+}
+
+function replaceSpecialImage(type,file){
+if(!file)return;
+
+fileToData(file,data=>{
+if(type==="hero")business.heroImage=data;
+if(type==="about")business.aboutImage=data;
+save();
+renderSite();
+renderAdmin();
+alert(type==="hero"?"Hero image replaced successfully.":"About image replaced successfully.");
+});
+}
+
+function renderSpecialImages(){
+
+document.getElementById("specialImages").innerHTML=`
+
+<div class="mediaCard">
+<img src="${safe(business.heroImage)}">
+<div class="mediaBody">
+<strong>Hero Image</strong>
+<small>Main image at the top of the website.</small>
+<div class="mediaActions">
+<button onclick="document.getElementById('heroUpload').click()">Replace</button>
+</div>
+</div>
+</div>
+
+<div class="mediaCard">
+<img src="${safe(business.aboutImage)}">
+<div class="mediaBody">
+<strong>About Image</strong>
+<small>Main About Us image.</small>
+<div class="mediaActions">
+<button onclick="document.getElementById('aboutUpload').click()">Replace</button>
+</div>
+</div>
+</div>`;
+}
+
+function addMediaImages(files){
+
+if(!files||!files.length)return;
+
+let remaining=files.length;
+
+[...files].forEach(file=>{
+fileToData(file,data=>{
+media.push({
+id:Date.now()+Math.random(),
+title:file.name.replace(/\.[^/.]+$/,""),
+description:"",
+image:data
+});
+remaining--;
+if(remaining===0){
+save();
+renderAdmin();
+alert(files.length+" image(s) added to your Media Manager.");
+}
+});
+});
+}
+
+function renderMedia(){
+
+const grid=document.getElementById("mediaGrid");
+
+if(!media.length){
+grid.innerHTML="<p style='color:#777'>No additional images uploaded yet. Tap '+ Add New Image' to upload images from your phone.</p>";
+return;
+}
+
+grid.innerHTML=media.map(m=>`
+<div class="mediaCard">
+<img src="${safe(m.image)}">
+<div class="mediaBody">
+<strong>${safe(m.title)}</strong>
+<small>${safe(m.description||"No description")}</small>
+
+<div class="mediaActions">
+<button onclick="editMedia('${m.id}')">Edit</button>
+<button onclick="replaceMedia('${m.id}')">Replace</button>
+<button onclick="deleteMedia('${m.id}')" style="color:#ff7777">Delete</button>
+</div>
+</div>
+</div>`).join("");
+}
+
+function editMedia(id){
+
+let m=media.find(x=>String(x.id)===String(id));
+if(!m)return;
+
+let title=prompt("Image title:",m.title);
+if(title===null)return;
+
+let description=prompt("Image description:",m.description||"");
+if(description===null)return;
+
+m.title=title;
+m.description=description;
+
+save();
+renderAdmin();
+}
+
+function replaceMedia(id){
+
+let input=document.createElement("input");
+input.type="file";
+input.accept="image/*";
+
+input.onchange=()=>{
+let file=input.files[0];
+if(!file)return;
+
+fileToData(file,data=>{
+let m=media.find(x=>String(x.id)===String(id));
+if(!m)return;
+
+m.image=data;
+save();
+renderAdmin();
+alert("Image replaced successfully.");
+});
+};
+
+input.click();
+}
+
+function deleteMedia(id){
+
+if(!confirm("Delete this image?"))return;
+
+media=media.filter(x=>String(x.id)!==String(id));
+save();
+renderAdmin();
+}
+
+
+/* CONTENT */
+
+function saveContent(){
+
+business.name=document.getElementById("editName").value.trim();
+business.hero=document.getElementById("editHero").value.trim();
+business.desc=document.getElementById("editDesc").value.trim();
+business.phone=document.getElementById("editPhone").value.trim();
+business.location=document.getElementById("editLocation").value.trim();
+
+save();
+renderSite();
+alert("Website content updated.");
+}
+
+
+/* PROJECTS */
+
+function addProject(){
+
+let name=document.getElementById("pName").value.trim();
+let category=document.getElementById("pCategory").value.trim();
+let description=document.getElementById("pDescription").value.trim();
+let file=document.getElementById("pImage").files[0];
+
+if(!name||!category){
+alert("Enter the project name and category.");
+return;
+}
+
+const finish=image=>{
+projects.unshift({
+id:Date.now(),
+name,category,description,
+image:image||"https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=85"
+});
+save();
+renderSite();
+renderAdmin();
+document.getElementById("pName").value="";
+document.getElementById("pCategory").value="";
+document.getElementById("pDescription").value="";
+document.getElementById("pImage").value="";
+alert("Project added.");
+};
+
+if(file)fileToData(file,finish);
+else finish();
+}
+
+function renderProjectAdmin(){
+
+let box=document.getElementById("projectAdminGrid");
+
+box.innerHTML=projects.map(p=>`
+<div class="projectAdmin">
+<img src="${safe(p.image)}">
+<strong>${safe(p.name)}</strong>
+<div style="font-size:11px;color:#888">${safe(p.category)}</div>
+<p style="font-size:11px;color:#888;margin-top:5px">${safe(p.description)}</p>
+<button class="btn danger" style="width:100%;padding:8px;margin-top:8px" onclick="deleteProject(${p.id})">Delete</button>
+</div>`).join("");
+}
+
+function deleteProject(id){
+if(!confirm("Delete this project?"))return;
+projects=projects.filter(p=>p.id!==id);
+save();
+renderSite();
+renderAdmin();
+}
+
+
+/* LEADS */
+
+document.getElementById("leadForm").addEventListener("submit",async e=>{
+e.preventDefault();
+
+let lead={
+date:new Date().toLocaleString(),
+name:document.getElementById("leadName").value,
+phone:document.getElementById("leadPhone").value,
+email:document.getElementById("leadEmail").value,
+type:document.getElementById("leadType").value,
+message:document.getElementById("leadMessage").value
+};
+
+let arr=leads();
+arr.unshift(lead);
+localStorage.setItem(STORE.leads,JSON.stringify(arr));
+
+let url=localStorage.getItem(STORE.apps);
+if(url){
+try{
+fetch(url,{method:"POST",mode:"no-cors",headers:{"Content-Type":"application/json"},body:JSON.stringify(lead)});
+}catch(err){}
+}
+
+let text=`Hello KAYMAN CONSTRUCTORS & DEVELOPERS.%0A%0AName: ${encodeURIComponent(lead.name)}%0APhone: ${encodeURIComponent(lead.phone)}%0AProject: ${encodeURIComponent(lead.type)}%0ADetails: ${encodeURIComponent(lead.message)}`;
+
+alert("Enquiry saved. WhatsApp will open now.");
+window.open("https://wa.me/2348029181035?text="+text,"_blank");
+e.target.reset();
+});
+
+
+function renderLeads(){
+let data=leads();
+document.getElementById("leadTable").innerHTML=data.length?data.map(x=>`
+<tr><td>${safe(x.date)}</td><td>${safe(x.name)}</td><td>${safe(x.phone)}</td><td>${safe(x.type)}</td><td>${safe(x.message)}</td></tr>`).join(""):`<tr><td colspan="5">No leads yet.</td></tr>`;
+}
+
+function clearLeads(){
+if(!confirm("Clear all leads?"))return;
+localStorage.removeItem(STORE.leads);
+renderAdmin();
+}
+
+
+/* CHATBOT */
+
+function toggleChat(){document.getElementById("chatbox").classList.toggle("open")}
+
+function addMessage(text,type){
+let d=document.createElement("div");
+d.className="message "+type;
+d.textContent=text;
+let box=document.getElementById("chatMessages");
+box.appendChild(d);
+box.scrollTop=box.scrollHeight;
+}
+
+function botReply(q){
+
+q=q.toLowerCase();
+
+if(q.includes("hello")||q.includes("hi")||q.includes("hey"))
+return"Hello! Welcome to KAYMAN CONSTRUCTORS & DEVELOPERS. How can I help you?";
+
+if(q.includes("service"))
+return"KAYMAN offers building construction, property development, civil engineering, project management, renovation/remodeling and consultation.";
+
+if(q.includes("price")||q.includes("cost")||q.includes("quote"))
+return"Project cost depends on the scope and requirements. Send your project details through the enquiry form or WhatsApp 0802 918 1035.";
+
+if(q.includes("contact")||q.includes("phone")||q.includes("whatsapp"))
+return"You can contact KAYMAN on WhatsApp or phone at 0802 918 1035.";
+
+if(q.includes("location")||q.includes("where"))
+return" KAYMAN is listed in Uyo, Akwa Ibom, Nigeria.";
+
+if(q.includes("renov"))
+return"Yes, renovation and remodeling enquiries can be submitted through the website.";
+
+return"I can help with KAYMAN's services, projects, quotations, construction enquiries and contact information. You can also WhatsApp 0802 918 1035.";
+}
+
+function sendChat(){
+
+let input=document.getElementById("chatInput");
+let q=input.value.trim();
+if(!q)return;
+
+addMessage(q,"user");
+input.value="";
+
+let reply=botReply(q);
+
+setTimeout(()=>{
+
+addMessage(reply,"bot");
+
+let arr=chats();
+arr.push({date:new Date().toLocaleString(),user:q,assistant:reply});
+localStorage.setItem(STORE.chats,JSON.stringify(arr));
+
+},250);
+}
+
+function renderChats(){
+
+let data=chats();
+
+document.getElementById("chatTable").innerHTML=data.length?data.slice().reverse().map(x=>`
+<tr><td>${safe(x.date)}</td><td>${safe(x.user)}</td><td>${safe(x.assistant)}</td></tr>`).join(""):`<tr><td colspan="3">No conversations yet.</td></tr>`;
+}
+
+function clearChats(){
+if(!confirm("Clear all chat logs?"))return;
+localStorage.removeItem(STORE.chats);
+renderAdmin();
+}
+
+
+/* SETTINGS */
+
+function saveApps(){
+localStorage.setItem(STORE.apps,document.getElementById("appsUrl").value.trim());
+alert("Apps Script URL saved.");
+}
+
+function changePassword(){
+
+let p=document.getElementById("newPassword").value.trim();
+
+if(p.length<6){
+alert("Use at least 6 characters.");
+return;
+}
+
+localStorage.setItem(STORE.password,p);
+document.getElementById("newPassword").value="";
+alert("Administrator password changed.");
+}
+
+function resetData(){
+
+if(!confirm("This will remove locally stored leads, chats, projects, images and visitor data. Continue?"))return;
+
+Object.values(STORE).forEach(k=>localStorage.removeItem(k));
+location.reload();
+}
+
+
+/* INITIALISE */
+
+document.getElementById("year").textContent=new Date().getFullYear();
+renderSite();
+renderAdmin();
+
+</script>
+</body>
+                                                                                                                   </html>
