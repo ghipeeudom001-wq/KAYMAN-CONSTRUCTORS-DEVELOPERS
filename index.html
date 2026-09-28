@@ -2,1058 +2,3789 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0d10">
+<meta name="description" content="KAYMAN CONSTRUCTORS & DEVELOPERS — Construction, property development and project management.">
 <title>KAYMAN CONSTRUCTORS & DEVELOPERS</title>
-<meta name="description" content="KAYMAN CONSTRUCTORS & DEVELOPERS">
+
 <style>
-:root{--gold:#d8ad55;--gold2:#f2cf7b;--bg:#070707;--bg2:#101010;--card:#151515;--text:#f5f5f5;--muted:#999;--line:#262626;--green:#25d366;--red:#ef4444}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+body{
+  font-family:Inter,Arial,Helvetica,sans-serif;
+  background:#090b0e;
+  color:#f5f1e8;
+  line-height:1.6;
+}
 a{text-decoration:none;color:inherit}
 button,input,textarea,select{font:inherit}
+button{cursor:pointer}
 img{max-width:100%;display:block}
 .container{width:min(1180px,92%);margin:auto}
 
-header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(5,5,5,.9);backdrop-filter:blur(15px);border-bottom:1px solid var(--line)}
-.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between}
-.logo{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:1px}
-.logoMark{width:42px;height:42px;border:2px solid var(--gold);display:grid;place-items:center;color:var(--gold);transform:rotate(45deg)}
-.logoMark span{transform:rotate(-45deg)}
-.logo small{display:block;color:var(--gold);font-size:8px;letter-spacing:2px}
-.navlinks{display:flex;gap:24px;align-items:center}
-.navlinks a{font-size:14px;color:#ddd}
-.navlinks a:hover{color:var(--gold)}
-.adminLink{border:1px solid var(--gold);padding:8px 13px;border-radius:5px;color:var(--gold)!important}
-.menu{display:none;background:none;border:0;color:#fff;font-size:27px}
+:root{
+  --gold:#d7aa52;
+  --gold2:#f1ce7a;
+  --dark:#090b0e;
+  --dark2:#101318;
+  --card:#14181e;
+  --line:rgba(255,255,255,.1);
+  --muted:#a9afb8;
+  --white:#fff;
+}
 
-.hero{min-height:100vh;display:flex;align-items:center;position:relative;background:linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.5),rgba(0,0,0,.82)),url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2000&q=85") center/cover}
-.heroContent{padding-top:80px;max-width:800px}
-.eyebrow{color:var(--gold);font-size:12px;letter-spacing:4px;text-transform:uppercase;font-weight:bold;margin-bottom:15px}
-.hero h1{font-size:clamp(42px,7vw,82px);line-height:.98;letter-spacing:-3px;margin-bottom:25px}
-.hero h1 span,.gold{color:var(--gold)}
-.hero p{font-size:18px;color:#ddd;max-width:650px;margin-bottom:30px}
-.buttons{display:flex;gap:12px;flex-wrap:wrap}
-.btn{border:0;padding:13px 20px;border-radius:5px;font-weight:bold;cursor:pointer;display:inline-flex;justify-content:center;align-items:center;gap:8px}
-.goldBtn{background:var(--gold);color:#080808}
-.goldBtn:hover{background:var(--gold2)}
-.outlineBtn{background:transparent;border:1px solid #555;color:#fff}
-.whatsappBtn{background:var(--green);color:#05200c}
+header{
+  position:fixed;
+  left:0;
+  right:0;
+  top:0;
+  z-index:1000;
+  background:rgba(7,9,12,.88);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.logo-wrap{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-width:0;
+}
+.logo-img{
+  width:48px;
+  height:48px;
+  object-fit:contain;
+  border-radius:10px;
+  background:#fff;
+  display:none;
+}
+.logo-text{
+  font-weight:900;
+  letter-spacing:.08em;
+  font-size:15px;
+  line-height:1.15;
+}
+.logo-text span{color:var(--gold)}
+nav{
+  display:flex;
+  gap:26px;
+  align-items:center;
+}
+nav a{
+  color:#ddd;
+  font-size:14px;
+  transition:.25s;
+}
+nav a:hover{color:var(--gold2)}
+.nav-btn{
+  background:var(--gold);
+  color:#111;
+  padding:11px 18px;
+  border-radius:7px;
+  font-weight:800;
+}
+.menu{
+  display:none;
+  border:0;
+  background:none;
+  color:white;
+  font-size:28px;
+}
 
-section{padding:90px 0}
-.stats{padding:35px 0;background:#0d0d0d;border-block:1px solid var(--line)}
-.statsGrid{display:grid;grid-template-columns:repeat(4,1fr)}
-.stat{text-align:center}
-.stat strong{font-size:36px;color:var(--gold);display:block}
-.stat span{font-size:12px;color:#999;text-transform:uppercase}
+.hero{
+  min-height:100vh;
+  padding:150px 0 90px;
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(90deg,rgba(5,7,9,.95),rgba(5,7,9,.6),rgba(5,7,9,.82)),
+    url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=85") center/cover;
+}
+.hero:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at 75% 40%,rgba(215,170,82,.15),transparent 35%);
+}
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:780px;
+}
+.eyebrow{
+  color:var(--gold2);
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  font-size:12px;
+  font-weight:800;
+  margin-bottom:18px;
+}
+.hero h1{
+  font-size:clamp(42px,7vw,82px);
+  line-height:.98;
+  letter-spacing:-.04em;
+  margin-bottom:25px;
+}
+.hero h1 span{color:var(--gold)}
+.hero p{
+  color:#c6cbd1;
+  max-width:650px;
+  font-size:18px;
+  margin-bottom:32px;
+}
+.actions{
+  display:flex;
+  gap:13px;
+  flex-wrap:wrap;
+}
+.btn{
+  border:0;
+  border-radius:7px;
+  padding:14px 22px;
+  font-weight:800;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+}
+.btn-gold{background:var(--gold);color:#111}
+.btn-outline{border:1px solid rgba(255,255,255,.25);color:#fff;background:rgba(255,255,255,.04)}
 
-.sectionHead{margin-bottom:40px}
-.sectionHead.center{text-align:center}
-.sectionHead h2{font-size:clamp(32px,5vw,50px);line-height:1.05}
-.sectionHead p{color:var(--muted);max-width:650px;margin-top:12px}
-.center p{margin-inline:auto}
+.stats{
+  margin-top:-55px;
+  position:relative;
+  z-index:5;
+}
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  background:#11151a;
+  border:1px solid var(--line);
+  border-radius:15px;
+  overflow:hidden;
+}
+.stat{
+  padding:25px;
+  text-align:center;
+  border-right:1px solid var(--line);
+}
+.stat:last-child{border:0}
+.stat strong{
+  font-size:30px;
+  color:var(--gold2);
+  display:block;
+}
+.stat span{font-size:13px;color:var(--muted)}
 
-.aboutGrid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
-.aboutImage{height:500px;border-radius:10px;background:center/cover url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=85");border:1px solid var(--line)}
-.aboutCopy p{color:#bbb;margin-bottom:17px}
-.check{display:flex;gap:10px;margin:10px 0}.check b{color:var(--gold)}
+section{padding:100px 0}
+.section-head{
+  margin-bottom:45px;
+  max-width:700px;
+}
+.section-head small{
+  color:var(--gold2);
+  text-transform:uppercase;
+  letter-spacing:.18em;
+  font-weight:800;
+}
+.section-head h2{
+  font-size:clamp(32px,5vw,55px);
+  line-height:1.05;
+  margin:12px 0;
+}
+.section-head p{color:var(--muted)}
 
-.services{background:#0b0b0b}
-.serviceGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.service{background:var(--card);border:1px solid var(--line);padding:28px;border-radius:8px;transition:.3s}
-.service:hover{transform:translateY(-5px);border-color:#80672e}
-.icon{width:50px;height:50px;border:1px solid var(--gold);color:var(--gold);display:grid;place-items:center;font-size:22px;margin-bottom:20px;border-radius:5px}
-.service p{font-size:14px;color:#999;margin-top:8px}
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+.about-image{
+  height:520px;
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  background:#111;
+}
+.about-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.about-copy p{color:#b9bec6;margin-bottom:20px}
+.check{
+  display:flex;
+  gap:12px;
+  margin:15px 0;
+}
+.check b{color:var(--gold2)}
 
-.projectGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.project{height:330px;position:relative;overflow:hidden;border-radius:9px;border:1px solid var(--line);background:#111}
-.project img{width:100%;height:100%;object-fit:cover;transition:.5s}
-.project:hover img{transform:scale(1.07)}
-.projectInfo{position:absolute;bottom:0;left:0;right:0;padding:30px 20px 18px;background:linear-gradient(transparent,rgba(0,0,0,.95))}
-.projectInfo small{color:var(--gold)}
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+.card{
+  background:linear-gradient(145deg,#151a20,#101318);
+  border:1px solid var(--line);
+  border-radius:15px;
+  padding:30px;
+  transition:.3s;
+}
+.card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(215,170,82,.4);
+}
+.icon{
+  width:52px;
+  height:52px;
+  border-radius:12px;
+  display:grid;
+  place-items:center;
+  background:rgba(215,170,82,.12);
+  color:var(--gold2);
+  font-size:23px;
+  margin-bottom:22px;
+}
+.card h3{margin-bottom:10px}
+.card p{color:var(--muted);font-size:14px}
 
-.why{background:linear-gradient(90deg,rgba(0,0,0,.9),rgba(0,0,0,.7)),url("https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=1800&q=85") center/cover fixed}
-.whyGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-.whyCard{background:rgba(10,10,10,.8);border:1px solid var(--line);padding:25px;border-radius:7px}
-.whyCard strong{color:var(--gold);display:block;margin-bottom:7px}
-.whyCard p{font-size:13px;color:#aaa}
+.projects{
+  background:#0d1014;
+}
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.project{
+  border-radius:15px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  background:#12161b;
+}
+.project-img{
+  height:240px;
+  background:#111;
+}
+.project-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.project-info{padding:20px}
+.project-info small{color:var(--gold2)}
+.project-info h3{margin:6px 0}
+.project-info p{color:var(--muted);font-size:14px}
 
-.cta{background:var(--gold);color:#080808;padding:55px 0}
-.ctaInner{display:flex;align-items:center;justify-content:space-between;gap:20px}
-.cta h2{font-size:clamp(28px,4vw,45px);line-height:1}
-.darkBtn{background:#080808;color:#fff}
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
 
-.contact{background:#0b0b0b}
-.contactGrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px}
-.contactCard,.formCard{background:#151515;border:1px solid var(--line);padding:28px;border-radius:8px}
-.contactItem{padding:16px 0;border-bottom:1px solid var(--line)}
-.contactItem small{display:block;color:var(--gold)}
-.contactItem a:hover{color:var(--gold)}
-.formGrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.field{margin-bottom:14px}.field.full{grid-column:1/-1}
-.field label{display:block;font-size:12px;color:#aaa;margin-bottom:5px}
-.field input,.field textarea,.field select,.adminInput{width:100%;background:#090909;color:#fff;border:1px solid var(--line);padding:13px;border-radius:5px;outline:none}
+.cta{
+  background:
+    linear-gradient(90deg,rgba(10,12,15,.95),rgba(10,12,15,.75)),
+    url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1800&q=85") center/cover;
+}
+.cta-box{
+  text-align:center;
+  max-width:800px;
+  margin:auto;
+}
+.cta h2{font-size:clamp(34px,5vw,60px);line-height:1.05;margin-bottom:18px}
+.cta p{color:#c4c8ce;margin-bottom:28px}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:30px;
+}
+.contact-list{
+  display:grid;
+  gap:14px;
+}
+.contact-item{
+  padding:22px;
+  border:1px solid var(--line);
+  background:#11151a;
+  border-radius:13px;
+}
+.contact-item small{color:var(--gold2)}
+.contact-item p{margin-top:5px;color:#ddd}
+.form{
+  background:#11151a;
+  border:1px solid var(--line);
+  border-radius:15px;
+  padding:30px;
+}
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+.field{margin-bottom:14px}
+.field label{
+  display:block;
+  font-size:12px;
+  color:#aeb4bd;
+  margin-bottom:6px;
+}
+.field input,.field textarea,.field select{
+  width:100%;
+  background:#090c10;
+  color:#fff;
+  border:1px solid var(--line);
+  padding:13px;
+  border-radius:8px;
+  outline:none;
+}
 .field textarea{min-height:130px;resize:vertical}
-.field input:focus,.field textarea:focus,.field select:focus,.adminInput:focus{border-color:var(--gold)}
 
-footer{padding:35px 0;border-top:1px solid var(--line);background:#050505}
-.footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.footer p{font-size:12px;color:#777}
-.footerLinks{display:flex;gap:18px;font-size:13px}
+footer{
+  padding:45px 0;
+  background:#07090b;
+  border-top:1px solid var(--line);
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr;
+  gap:30px;
+}
+footer p{color:var(--muted);font-size:14px;margin-top:10px}
+footer h4{color:var(--gold2);margin-bottom:12px}
+.footer-bottom{
+  margin-top:35px;
+  padding-top:20px;
+  border-top:1px solid var(--line);
+  color:#777;
+  font-size:12px;
+}
 
-.floatWA,.chatButton{position:fixed;right:20px;border:0;z-index:900;cursor:pointer;border-radius:50%;display:grid;place-items:center}
-.floatWA{bottom:20px;width:58px;height:58px;background:var(--green);font-size:25px;color:#06210d}
-.chatButton{bottom:90px;width:58px;height:58px;background:var(--gold);font-size:23px}
+.whatsapp{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:900;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#1faa59;
+  color:white;
+  display:grid;
+  place-items:center;
+  font-size:26px;
+  box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
 
-.chatbox{display:none;position:fixed;right:20px;bottom:160px;width:min(370px,calc(100% - 30px));height:500px;background:#111;border:1px solid var(--gold);border-radius:12px;z-index:1500;overflow:hidden}
-.chatbox.open{display:flex;flex-direction:column}
-.chatHead{padding:15px;background:#181818;border-bottom:1px solid var(--line);display:flex;justify-content:space-between}
-.chatHead strong{color:var(--gold)}
-.chatClose{background:none;border:0;color:#fff;font-size:20px}
-.chatMessages{flex:1;padding:15px;overflow:auto}
-.message{max-width:85%;padding:9px 12px;border-radius:10px;margin-bottom:9px;font-size:13px}
-.bot{background:#202020}.user{background:var(--gold);color:#111;margin-left:auto}
-.chatInput{display:flex;border-top:1px solid var(--line)}
-.chatInput input{flex:1;background:#080808;color:#fff;border:0;padding:13px;outline:0}
-.chatInput button{width:55px;background:var(--gold);border:0}
+.chat-button{
+  position:fixed;
+  right:20px;
+  bottom:90px;
+  z-index:900;
+  width:54px;
+  height:54px;
+  border-radius:50%;
+  border:0;
+  background:var(--gold);
+  color:#111;
+  font-size:22px;
+}
+.chatbox{
+  position:fixed;
+  right:20px;
+  bottom:155px;
+  width:min(370px,calc(100% - 30px));
+  height:500px;
+  background:#101419;
+  border:1px solid var(--line);
+  border-radius:16px;
+  z-index:1001;
+  display:none;
+  flex-direction:column;
+  overflow:hidden;
+  box-shadow:0 25px 70px rgba(0,0,0,.55);
+}
+.chatbox.open{display:flex}
+.chat-head{
+  padding:17px;
+  background:#151a20;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.chat-head strong{color:var(--gold2)}
+.chat-close{background:none;border:0;color:#fff;font-size:20px}
+.chat-messages{
+  flex:1;
+  padding:15px;
+  overflow:auto;
+}
+.msg{
+  max-width:85%;
+  padding:10px 12px;
+  margin-bottom:10px;
+  border-radius:12px;
+  font-size:13px;
+}
+.bot{background:#1b2027}
+.user{background:var(--gold);color:#111;margin-left:auto}
+.chat-form{
+  padding:10px;
+  display:flex;
+  gap:7px;
+  border-top:1px solid var(--line);
+}
+.chat-form input{
+  flex:1;
+  background:#090c10;
+  color:white;
+  border:1px solid var(--line);
+  padding:11px;
+  border-radius:8px;
+}
+.chat-form button{
+  border:0;
+  background:var(--gold);
+  color:#111;
+  border-radius:8px;
+  padding:0 15px;
+}
 
 /* ADMIN */
-.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);z-index:3000;padding:15px;overflow:auto}
-.modal.show{display:block}
-.adminWrap{max-width:1250px;margin:auto;background:#0c0c0c;border:1px solid var(--line);border-radius:10px;min-height:calc(100vh - 30px);overflow:hidden}
-.login{max-width:430px;margin:100px auto;background:#151515;padding:32px;border:1px solid var(--line);border-radius:9px}
-.login h2{color:var(--gold);margin-bottom:7px}.login p{font-size:13px;color:#888;margin-bottom:18px}
-.adminHeader{padding:17px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px}
-.adminHeader strong{color:var(--gold)}
-.adminBody{display:grid;grid-template-columns:220px 1fr;min-height:750px}
-.sidebar{background:#101010;border-right:1px solid var(--line);padding:12px}
-.tab{width:100%;text-align:left;background:none;border:0;color:#999;padding:12px;border-radius:5px;cursor:pointer;margin-bottom:3px}
-.tab:hover,.tab.active{background:#1d1d1d;color:var(--gold)}
-.adminContent{padding:25px}
-.panel{display:none}.panel.active{display:block}
-.dashboard{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:20px}
-.dash{background:#151515;border:1px solid var(--line);padding:18px;border-radius:7px}
-.dash small{color:#888}.dash strong{display:block;color:var(--gold);font-size:29px}
-.adminBox{background:#151515;border:1px solid var(--line);padding:20px;border-radius:8px;margin-bottom:18px}
-.adminBox h3{color:var(--gold);margin-bottom:15px}
-.adminInput{margin-bottom:10px}
-.notice{font-size:12px;color:#777;margin-top:8px}
-.danger{background:#391313!important;color:#ffaaaa!important;border:1px solid #662222!important}
-
-.mediaToolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}
-.mediaGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.mediaCard{background:#0c0c0c;border:1px solid var(--line);border-radius:8px;overflow:hidden}
-.mediaCard img{height:190px;width:100%;object-fit:cover}
-.mediaBody{padding:13px}
-.mediaBody strong{display:block;margin-bottom:5px}
-.mediaBody small{color:#888}
-.mediaActions{display:flex;gap:7px;margin-top:12px}
-.mediaActions button{flex:1;padding:8px;border-radius:4px;border:1px solid var(--line);background:#191919;color:#fff;cursor:pointer;font-size:12px}
-.mediaActions button:hover{border-color:var(--gold);color:var(--gold)}
-
-.projectAdminGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
-.projectAdmin{background:#0c0c0c;border:1px solid var(--line);padding:10px;border-radius:7px}
-.projectAdmin img{height:130px;width:100%;object-fit:cover;border-radius:5px}
-.tableWrap{overflow:auto}
-table{width:100%;border-collapse:collapse;font-size:12px}
-th,td{padding:10px 7px;border-bottom:1px solid var(--line);text-align:left}
-th{color:var(--gold)}
-
-.hidden{display:none!important}
+.admin-overlay{
+  position:fixed;
+  inset:0;
+  background:#07090c;
+  z-index:2000;
+  overflow:auto;
+  display:none;
+}
+.admin-overlay.show{display:block}
+.admin-login{
+  min-height:100vh;
+  display:grid;
+  place-items:center;
+  padding:25px;
+}
+.login-box{
+  width:min(430px,100%);
+  background:#11151a;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:35px;
+}
+.login-box h2{margin-bottom:8px}
+.login-box p{color:var(--muted);font-size:13px;margin-bottom:25px}
+.login-error{
+  color:#ff7777;
+  font-size:13px;
+  margin:8px 0;
+  display:none;
+}
+.admin-app{display:none;min-height:100vh}
+.admin-top{
+  height:72px;
+  background:#0d1014;
+  border-bottom:1px solid var(--line);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 25px;
+  position:sticky;
+  top:0;
+  z-index:20;
+}
+.admin-brand{font-weight:900;letter-spacing:.08em}
+.admin-brand span{color:var(--gold)}
+.admin-close{
+  border:1px solid var(--line);
+  background:#15191f;
+  color:#fff;
+  padding:9px 13px;
+  border-radius:7px;
+}
+.admin-layout{
+  display:grid;
+  grid-template-columns:230px 1fr;
+  min-height:calc(100vh - 72px);
+}
+.admin-sidebar{
+  background:#0b0e12;
+  border-right:1px solid var(--line);
+  padding:20px 12px;
+}
+.admin-tab{
+  width:100%;
+  background:none;
+  border:0;
+  color:#aaa;
+  text-align:left;
+  padding:12px 13px;
+  border-radius:8px;
+  margin-bottom:5px;
+}
+.admin-tab.active,.admin-tab:hover{
+  background:#181d24;
+  color:var(--gold2);
+}
+.admin-main{padding:28px;min-width:0}
+.admin-section{display:none}
+.admin-section.active{display:block}
+.admin-title{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+  margin-bottom:25px;
+}
+.admin-title h2{font-size:28px}
+.admin-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+.admin-stat{
+  background:#12161b;
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:22px;
+}
+.admin-stat span{font-size:12px;color:#8e959e}
+.admin-stat strong{
+  display:block;
+  color:var(--gold2);
+  font-size:28px;
+}
+.admin-card{
+  background:#11151a;
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:22px;
+  margin-bottom:18px;
+}
+.admin-card h3{margin-bottom:15px}
+.admin-form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+.admin-field{margin-bottom:13px}
+.admin-field label{
+  display:block;
+  color:#9fa6ae;
+  font-size:12px;
+  margin-bottom:6px;
+}
+.admin-field input,.admin-field textarea,.admin-field select{
+  width:100%;
+  background:#080b0f;
+  color:#fff;
+  border:1px solid var(--line);
+  padding:11px;
+  border-radius:7px;
+}
+.admin-field textarea{min-height:120px}
+.full{grid-column:1/-1}
+.admin-btn{
+  border:0;
+  background:var(--gold);
+  color:#111;
+  padding:11px 16px;
+  border-radius:7px;
+  font-weight:800;
+}
+.admin-btn.dark{
+  background:#1a1f26;
+  color:#fff;
+  border:1px solid var(--line);
+}
+.admin-btn.red{
+  background:#7c2727;
+  color:white;
+}
+.media-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+.media-card{
+  background:#0b0e12;
+  border:1px solid var(--line);
+  border-radius:11px;
+  overflow:hidden;
+}
+.media-card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+.media-body{padding:14px}
+.media-body h4{margin-bottom:5px}
+.media-body p{color:#9299a2;font-size:12px;margin-bottom:10px}
+.media-actions{display:flex;gap:7px;flex-wrap:wrap}
+.file-input{
+  width:100%;
+  padding:10px;
+  background:#090c10;
+  border:1px dashed #444;
+  color:#bbb;
+  border-radius:7px;
+}
+.table-wrap{overflow:auto}
+table{width:100%;border-collapse:collapse;min-width:700px}
+th,td{
+  padding:11px;
+  border-bottom:1px solid var(--line);
+  text-align:left;
+  font-size:12px;
+}
+th{color:var(--gold2)}
+td{color:#c5c9ce}
+.notice{
+  padding:12px 14px;
+  border:1px solid rgba(215,170,82,.25);
+  background:rgba(215,170,82,.06);
+  color:#d5c39c;
+  border-radius:8px;
+  margin-bottom:18px;
+  font-size:13px;
+}
+.success{
+  padding:11px;
+  color:#7ce6a1;
+  font-size:13px;
+  display:none;
+}
+.empty{color:#777;padding:25px;text-align:center}
 
 @media(max-width:900px){
-.navlinks{display:none;position:absolute;top:78px;left:0;right:0;background:#080808;padding:15px;flex-direction:column;align-items:stretch}
-.navlinks.open{display:flex}.menu{display:block}
-.statsGrid{grid-template-columns:1fr 1fr}.aboutGrid,.contactGrid{grid-template-columns:1fr}
-.serviceGrid,.projectGrid{grid-template-columns:1fr 1fr}
-.whyGrid{grid-template-columns:1fr 1fr}
-.adminBody{grid-template-columns:1fr}.sidebar{display:flex;overflow:auto;border-right:0;border-bottom:1px solid var(--line)}
-.tab{min-width:max-content;width:auto}
-.dashboard{grid-template-columns:1fr 1fr}
-.mediaGrid,.projectAdminGrid{grid-template-columns:1fr 1fr}
+  nav{display:none}
+  .menu{display:block}
+  .nav.mobile-open nav{
+    display:flex;
+    position:absolute;
+    top:78px;
+    left:0;
+    right:0;
+    background:#0b0e12;
+    padding:20px;
+    flex-direction:column;
+    align-items:flex-start;
+    border-bottom:1px solid var(--line);
+  }
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .services-grid,.project-grid{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .admin-layout{grid-template-columns:1fr}
+  .admin-sidebar{
+    display:flex;
+    overflow:auto;
+    gap:5px;
+    border-right:0;
+    border-bottom:1px solid var(--line);
+  }
+  .admin-tab{white-space:nowrap;width:auto}
+  .admin-grid{grid-template-columns:1fr 1fr}
+  .media-grid{grid-template-columns:1fr 1fr}
 }
+
 @media(max-width:600px){
-section{padding:70px 0}.hero h1{letter-spacing:-2px}.hero p{font-size:15px}
-.serviceGrid,.projectGrid,.whyGrid,.dashboard,.mediaGrid,.projectAdminGrid{grid-template-columns:1fr}
-.aboutImage{height:380px}.ctaInner{flex-direction:column;align-items:flex-start}
-.formGrid{grid-template-columns:1fr}.field.full{grid-column:auto}
-.adminContent{padding:13px}.modal{padding:5px}
-.adminWrap{min-height:calc(100vh - 10px)}
+  .hero{padding-top:130px}
+  section{padding:75px 0}
+  .stats{margin-top:0;padding-top:20px}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .services-grid,.project-grid,.why-grid{grid-template-columns:1fr}
+  .form-grid,.admin-form-grid{grid-template-columns:1fr}
+  .media-grid{grid-template-columns:1fr}
+  .admin-main{padding:18px}
+  .footer-grid{grid-template-columns:1fr}
+  .logo-text{font-size:12px}
 }
 </style>
 </head>
 
 <body>
 
+<!-- ===================================================
+     IMPORTANT:
+     PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL BELOW.
+     DO NOT PASTE THE GOOGLE SHEET URL.
+==================================================== -->
+
+<script>
+const APPS_SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbzNbTnWEoqMBKR_VYFpsmXyZE5wtpJZ7KtQTy72AJ6hxgbqFdbB1mK3gz4GNOZP58WJsw/exec";
+
+const ADMIN_PASSWORD = "KAYMAN 2026";
+
+const DEFAULT_DATA = {
+  businessName:"KAYMAN CONSTRUCTORS & DEVELOPERS",
+  phone:"0802 918 1035",
+  whatsapp:"0802 918 1035",
+  email:"",
+  address:"Uyo, Akwa Ibom, Nigeria",
+  heroTitle:"Building Spaces. Creating Legacies.",
+  heroText:"Professional construction and property development solutions delivered with quality, precision and commitment.",
+  aboutTitle:"Built With Purpose",
+  aboutText:"KAYMAN CONSTRUCTORS & DEVELOPERS provides professional construction and development services for residential, commercial and property projects."
+};
+
+let websiteData = {...DEFAULT_DATA};
+let mediaData = [];
+let projectsData = [];
+let adminPassword = ADMIN_PASSWORD;
+let chatSession = crypto.randomUUID ? crypto.randomUUID() : String(Date.now());
+let chatHistory = [];
+let adminLoggedIn = false;
+
+
+/* ===================================================
+   BACKEND COMMUNICATION
+=================================================== */
+
+async function apiPost(payload){
+
+  if(!APPS_SCRIPT_URL ||
+     APPS_SCRIPT_URL.includes("PASTE-YOUR")){
+
+    console.warn("Apps Script URL has not been added.");
+    return {
+      success:false,
+      offline:true,
+      message:"Apps Script URL has not been configured."
+    };
+  }
+
+  try{
+
+    const response = await fetch(APPS_SCRIPT_URL,{
+      method:"POST",
+      headers:{
+        "Content-Type":"text/plain;charset=utf-8"
+      },
+      body:JSON.stringify(payload)
+    });
+
+    return await response.json();
+
+  }catch(error){
+
+    console.error(error);
+
+    return {
+      success:false,
+      message:error.message
+    };
+  }
+}
+
+
+async function apiGet(action){
+
+  if(!APPS_SCRIPT_URL ||
+     APPS_SCRIPT_URL.includes("PASTE-YOUR")){
+
+    return {
+      success:false,
+      offline:true
+    };
+  }
+
+  try{
+
+    const response =
+      await fetch(
+        APPS_SCRIPT_URL +
+        "?action=" +
+        encodeURIComponent(action)
+      );
+
+    return await response.json();
+
+  }catch(error){
+
+    console.error(error);
+
+    return {
+      success:false,
+      message:error.message
+    };
+  }
+}
+
+
+/* ===================================================
+   LOAD WEBSITE
+=================================================== */
+
+async function loadWebsite(){
+
+  try{
+
+    const result =
+      await apiGet("getWebsite");
+
+    if(result.success && result.content){
+
+      websiteData = {
+        ...DEFAULT_DATA,
+        ...result.content
+      };
+    }
+
+  }catch(e){
+    console.log("Using default website content.");
+  }
+
+  renderWebsite();
+
+  loadMedia();
+  loadProjects();
+
+  trackVisit();
+}
+
+
+async function loadMedia(){
+
+  try{
+
+    const result =
+      await apiGet("getMedia");
+
+    if(result.success){
+
+      mediaData = result.media || [];
+
+      renderMediaOnWebsite();
+
+    }
+
+  }catch(e){}
+}
+
+
+async function loadProjects(){
+
+  try{
+
+    const result =
+      await apiGet("getProjects");
+
+    if(result.success){
+
+      projectsData =
+        result.projects || [];
+
+      renderProjects();
+
+    }
+
+  }catch(e){}
+}
+
+
+/* ===================================================
+   WEBSITE RENDERING
+=================================================== */
+
+function renderWebsite(){
+
+  document.title =
+    websiteData.businessName ||
+    DEFAULT_DATA.businessName;
+
+  document.querySelectorAll("[data-business]")
+    .forEach(el=>{
+      el.textContent =
+        websiteData.businessName ||
+        DEFAULT_DATA.businessName;
+    });
+
+  document.getElementById("heroTitle").innerHTML =
+    safeText(websiteData.heroTitle ||
+    DEFAULT_DATA.heroTitle)
+    .replace(
+      /Building/i,
+      '<span>Building</span>'
+    );
+
+  document.getElementById("heroText").textContent =
+    websiteData.heroText ||
+    DEFAULT_DATA.heroText;
+
+  document.getElementById("aboutTitle").textContent =
+    websiteData.aboutTitle ||
+    DEFAULT_DATA.aboutTitle;
+
+  document.getElementById("aboutText").textContent =
+    websiteData.aboutText ||
+    DEFAULT_DATA.aboutText;
+
+  document.getElementById("contactPhone").textContent =
+    websiteData.phone || DEFAULT_DATA.phone;
+
+  document.getElementById("contactAddress").textContent =
+    websiteData.address || DEFAULT_DATA.address;
+
+  document.getElementById("contactEmail").textContent =
+    websiteData.email || "Email available on request";
+
+  const wa =
+    cleanPhone(
+      websiteData.whatsapp ||
+      websiteData.phone ||
+      DEFAULT_DATA.whatsapp
+    );
+
+  document.querySelectorAll(".wa-link")
+    .forEach(el=>{
+      el.href =
+        "https://wa.me/" + wa;
+    });
+
+  const phone =
+    websiteData.phone ||
+    DEFAULT_DATA.phone;
+
+  document.querySelectorAll(".phone-link")
+    .forEach(el=>{
+      el.href =
+        "tel:" +
+        phone.replace(/\s/g,"");
+    });
+
+  const email =
+    websiteData.email || "";
+
+  document.querySelectorAll(".email-link")
+    .forEach(el=>{
+      if(email){
+        el.href =
+          "mailto:" + email;
+      }
+    });
+}
+
+
+function safeText(value){
+
+  const div =
+    document.createElement("div");
+
+  div.textContent =
+    String(value || "");
+
+  return div.innerHTML;
+}
+
+
+function cleanPhone(phone){
+
+  let p =
+    String(phone || "")
+      .replace(/\D/g,"");
+
+  if(p.startsWith("0")){
+    p = "234" + p.substring(1);
+  }
+
+  return p;
+}
+
+
+/* ===================================================
+   MEDIA / LOGO
+=================================================== */
+
+function getMediaByType(type){
+
+  return mediaData.filter(
+    item => item.type === type
+  );
+}
+
+
+function renderMediaOnWebsite(){
+
+  const hero =
+    getMediaByType("hero")[0];
+
+  const about =
+    getMediaByType("about")[0];
+
+  const logo =
+    getMediaByType("logo")[0];
+
+  if(hero && hero.imageURL){
+
+    document.querySelector(".hero")
+      .style.backgroundImage =
+      `linear-gradient(90deg,rgba(5,7,9,.95),rgba(5,7,9,.6),rgba(5,7,9,.82)),url("${hero.imageURL}")`;
+  }
+
+  if(about && about.imageURL){
+
+    document.getElementById("aboutImage")
+      .src = about.imageURL;
+  }
+
+  if(logo && logo.imageURL){
+
+    document.querySelectorAll(".logo-img")
+      .forEach(img=>{
+        img.src = logo.imageURL;
+        img.style.display = "block";
+      });
+  }
+}
+
+
+/* ===================================================
+   PROJECTS
+=================================================== */
+
+function renderProjects(){
+
+  const grid =
+    document.getElementById("projectGrid");
+
+  if(!grid)return;
+
+  if(!projectsData.length){
+
+    grid.innerHTML = `
+      <div class="empty" style="grid-column:1/-1">
+        Projects will appear here when the owner adds them from the admin panel.
+      </div>
+    `;
+
+    return;
+  }
+
+  grid.innerHTML =
+    projectsData.map(project=>`
+
+      <article class="project">
+
+        <div class="project-img">
+
+          <img
+            src="${safeAttr(
+              project.imageURL ||
+              "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=80"
+            )}"
+            alt="${safeAttr(project.title)}"
+          >
+
+        </div>
+
+        <div class="project-info">
+
+          <small>
+            ${safeText(project.category || "PROJECT")}
+          </small>
+
+          <h3>
+            ${safeText(project.title || "Project")}
+          </h3>
+
+          <p>
+            ${safeText(project.description || "")}
+          </p>
+
+        </div>
+
+      </article>
+
+    `).join("");
+}
+
+
+function safeAttr(value){
+
+  return String(value || "")
+    .replace(/&/g,"&amp;")
+    .replace(/"/g,"&quot;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;");
+}
+
+
+/* ===================================================
+   VISITOR TRACKING
+=================================================== */
+
+function trackVisit(){
+
+  apiPost({
+    action:"trackVisit",
+    page:location.pathname,
+    userAgent:navigator.userAgent
+  });
+}
+
+
+/* ===================================================
+   CONTACT / LEAD
+=================================================== */
+
+async function submitLead(event){
+
+  event.preventDefault();
+
+  const form =
+    event.target;
+
+  const data =
+    Object.fromEntries(
+      new FormData(form).entries()
+    );
+
+  const result =
+    await apiPost({
+      action:"saveLead",
+      ...data,
+      source:"KAYMAN Website"
+    });
+
+  document.getElementById("leadSuccess")
+    .style.display = "block";
+
+  const message =
+`Hello KAYMAN CONSTRUCTORS & DEVELOPERS.
+
+I would like to make an enquiry.
+
+Name: ${data.name || ""}
+Phone: ${data.phone || ""}
+Email: ${data.email || ""}
+Service: ${data.service || ""}
+Message: ${data.message || ""}`;
+
+  const wa =
+    cleanPhone(
+      websiteData.whatsapp ||
+      websiteData.phone
+    );
+
+  setTimeout(()=>{
+
+    window.open(
+      "https://wa.me/" +
+      wa +
+      "?text=" +
+      encodeURIComponent(message),
+      "_blank"
+    );
+
+  },500);
+
+  form.reset();
+}
+
+
+/* ===================================================
+   CHATBOT
+=================================================== */
+
+function toggleChat(){
+
+  document.getElementById("chatbox")
+    .classList.toggle("open");
+}
+
+
+function addChatMessage(text,type){
+
+  const box =
+    document.getElementById("chatMessages");
+
+  const div =
+    document.createElement("div");
+
+  div.className =
+    "msg " + type;
+
+  div.textContent = text;
+
+  box.appendChild(div);
+
+  box.scrollTop =
+    box.scrollHeight;
+}
+
+
+function chatbotReply(message){
+
+  const m =
+    message.toLowerCase();
+
+  if(
+    m.includes("service") ||
+    m.includes("what do you") ||
+    m.includes("offer")
+  ){
+
+    return "KAYMAN provides building construction, property development, renovation, project management, real estate development and construction consultation.";
+
+  }
+
+  if(
+    m.includes("price") ||
+    m.includes("cost") ||
+    m.includes("quote")
+  ){
+
+    return "Project pricing depends on the scope, materials, location and specifications. You can send your project details and the KAYMAN team can discuss the requirements with you.";
+
+  }
+
+  if(
+    m.includes("location") ||
+    m.includes("where")
+  ){
+
+    return websiteData.address ||
+      "Uyo, Akwa Ibom, Nigeria.";
+
+  }
+
+  if(
+    m.includes("renovation") ||
+    m.includes("repair")
+  ){
+
+    return "Yes. KAYMAN can discuss renovation and improvement projects. Tell us what you want changed and the chatbot can help collect the details.";
+
+  }
+
+  if(
+    m.includes("contact") ||
+    m.includes("phone") ||
+    m.includes("whatsapp")
+  ){
+
+    return "You can contact KAYMAN through WhatsApp or the enquiry form on this website.";
+
+  }
+
+  return "I can help with KAYMAN's construction services, property development, renovation, project enquiries and contact information. Tell me what you would like to know.";
+}
+
+
+async function sendChat(event){
+
+  event.preventDefault();
+
+  const input =
+    document.getElementById("chatInput");
+
+  const message =
+    input.value.trim();
+
+  if(!message)return;
+
+  addChatMessage(
+    message,
+    "user"
+  );
+
+  input.value = "";
+
+  const reply =
+    chatbotReply(message);
+
+  setTimeout(()=>{
+
+    addChatMessage(
+      reply,
+      "bot"
+    );
+
+  },250);
+
+  apiPost({
+    action:"saveChat",
+    session:chatSession,
+    visitor:"Website visitor",
+    message:message,
+    reply:reply
+  });
+}
+
+
+/* ===================================================
+   ADMIN OPEN / LOGIN
+=================================================== */
+
+function openAdmin(){
+
+  document.getElementById("adminOverlay")
+    .classList.add("show");
+
+  document.getElementById("adminLogin")
+    .style.display = "grid";
+
+  document.getElementById("adminApp")
+    .style.display = "none";
+
+  document.getElementById("adminPassword")
+    .value = "";
+
+  document.getElementById("adminError")
+    .style.display = "none";
+}
+
+
+function closeAdmin(){
+
+  document.getElementById("adminOverlay")
+    .classList.remove("show");
+
+  adminLoggedIn = false;
+}
+
+
+async function adminLogin(){
+
+  const password =
+    document.getElementById("adminPassword")
+      .value;
+
+  if(!password){
+
+    showAdminError(
+      "Enter the admin password."
+    );
+
+    return;
+  }
+
+  const result =
+    await apiPost({
+      action:"login",
+      password:password
+    });
+
+  if(result.success){
+
+    adminLoggedIn = true;
+    adminPassword = password;
+
+    document.getElementById("adminLogin")
+      .style.display = "none";
+
+    document.getElementById("adminApp")
+      .style.display = "block";
+
+    openAdminTab("overview");
+
+    loadAdminData();
+
+  }else{
+
+    /*
+      If the Apps Script URL has not been connected yet,
+      allow the configured demo password so you can still
+      preview the dashboard.
+    */
+
+    if(result.offline &&
+       password === ADMIN_PASSWORD){
+
+      adminLoggedIn = true;
+      adminPassword = password;
+
+      document.getElementById("adminLogin")
+        .style.display = "none";
+
+      document.getElementById("adminApp")
+        .style.display = "block";
+
+      openAdminTab("overview");
+
+      loadAdminData();
+
+      return;
+    }
+
+    showAdminError(
+      result.message ||
+      "Login failed."
+    );
+  }
+}
+
+
+function showAdminError(message){
+
+  const el =
+    document.getElementById("adminError");
+
+  el.textContent = message;
+  el.style.display = "block";
+}
+
+
+/* ===================================================
+   ADMIN NAVIGATION
+=================================================== */
+
+function openAdminTab(tab){
+
+  document.querySelectorAll(".admin-tab")
+    .forEach(button=>{
+      button.classList.toggle(
+        "active",
+        button.dataset.tab === tab
+      );
+    });
+
+  document.querySelectorAll(".admin-section")
+    .forEach(section=>{
+      section.classList.toggle(
+        "active",
+        section.id === "admin-" + tab
+      );
+    });
+
+  if(tab === "images"){
+    renderAdminMedia();
+  }
+
+  if(tab === "projects"){
+    renderAdminProjects();
+  }
+
+  if(tab === "leads"){
+    renderAdminLeads();
+  }
+
+  if(tab === "chats"){
+    renderAdminChats();
+  }
+
+  if(tab === "settings"){
+    fillSettings();
+  }
+}
+
+
+/* ===================================================
+   ADMIN DATA
+=================================================== */
+
+async function loadAdminData(){
+
+  const result =
+    await apiPost({
+      action:"getAdminData",
+      password:adminPassword
+    });
+
+  if(result.success){
+
+    updateStats(
+      result.stats || {}
+    );
+
+    if(result.media){
+
+      mediaData =
+        result.media.map(row=>{
+
+          if(Array.isArray(row)){
+
+            return {
+              id:row[0],
+              date:row[1],
+              title:row[2],
+              description:row[3],
+              imageURL:row[4],
+              fileId:row[5],
+              type:row[6]
+            };
+
+          }
+
+          return row;
+
+        });
+
+    }
+
+    if(result.projects){
+
+      projectsData =
+        result.projects.map(row=>{
+
+          if(Array.isArray(row)){
+
+            return {
+              id:row[0],
+              date:row[1],
+              title:row[2],
+              category:row[3],
+              description:row[4],
+              imageURL:row[5],
+              status:row[6]
+            };
+
+          }
+
+          return row;
+
+        });
+
+    }
+
+    renderAdminMedia();
+    renderAdminProjects();
+    renderAdminLeads(
+      result.leads || []
+    );
+    renderAdminChats(
+      result.chats || []
+    );
+
+  }else{
+
+    /*
+      Demo/local fallback.
+    */
+
+    updateStats({
+      leads:0,
+      chats:0,
+      visits:0,
+      media:mediaData.length,
+      projects:projectsData.length
+    });
+  }
+}
+
+
+function updateStats(stats){
+
+  document.getElementById("statVisits")
+    .textContent =
+    stats.visits || 0;
+
+  document.getElementById("statLeads")
+    .textContent =
+    stats.leads || 0;
+
+  document.getElementById("statChats")
+    .textContent =
+    stats.chats || 0;
+
+  document.getElementById("statImages")
+    .textContent =
+    stats.media || 0;
+
+  document.getElementById("statProjects")
+    .textContent =
+    stats.projects || 0;
+}
+
+
+/* ===================================================
+   ADMIN MEDIA
+=================================================== */
+
+function renderAdminMedia(){
+
+  const box =
+    document.getElementById("mediaManager");
+
+  const mainTypes = [
+    {
+      type:"logo",
+      name:"Company Logo",
+      description:"The main KAYMAN logo."
+    },
+    {
+      type:"hero",
+      name:"Hero Image",
+      description:"Large image used at the top of the website."
+    },
+    {
+      type:"about",
+      name:"About Image",
+      description:"Main image used in the About section."
+    }
+  ];
+
+  let html = "";
+
+  mainTypes.forEach(item=>{
+
+    const existing =
+      getMediaByType(item.type)[0];
+
+    html += `
+
+      <div class="admin-card">
+
+        <h3>${item.name}</h3>
+
+        <p style="color:#9299a2;font-size:13px;margin-bottom:15px">
+          ${item.description}
+        </p>
+
+        ${
+          existing
+          ?
+          `
+          <div style="display:flex;gap:15px;align-items:center;flex-wrap:wrap">
+
+            <img
+              src="${safeAttr(existing.imageURL)}"
+              style="width:130px;height:90px;object-fit:cover;border-radius:8px"
+            >
+
+            <div>
+              <button
+                class="admin-btn"
+                onclick="replaceSpecialImage('${item.type}')"
+              >
+                Replace
+              </button>
+
+              <button
+                class="admin-btn red"
+                onclick="deleteMedia('${existing.id}')"
+              >
+                Delete
+              </button>
+            </div>
+
+          </div>
+          `
+          :
+          `
+          <input
+            class="file-input"
+            type="file"
+            accept="image/*"
+            onchange="uploadSpecialImage(event,'${item.type}')"
+          >
+          `
+        }
+
+      </div>
+    `;
+
+  });
+
+  html += `
+
+    <div class="admin-card">
+
+      <div class="admin-title">
+        <h3>Additional Website Images</h3>
+
+        <button
+          class="admin-btn"
+          onclick="document.getElementById('galleryUpload').click()"
+        >
+          + Add Images
+        </button>
+      </div>
+
+      <input
+        id="galleryUpload"
+        type="file"
+        accept="image/*"
+        multiple
+        style="display:none"
+        onchange="uploadGalleryImages(event)"
+      >
+
+      <p style="color:#8f969e;font-size:13px">
+        Add as many project/gallery images as you need.
+        Images are stored in Google Drive when the backend is connected.
+      </p>
+
+    </div>
+
+  `;
+
+  if(mediaData.filter(x=>
+    !["logo","hero","about"].includes(x.type)
+  ).length){
+
+    html += `
+      <div class="admin-card">
+        <div class="empty">
+          No additional images have been uploaded yet.
+        </div>
+      </div>
+    `;
+
+  }else{
+
+    html += `
+      <div class="media-grid">
+    `;
+
+    mediaData
+      .filter(x=>
+        !["logo","hero","about"].includes(x.type)
+      )
+      .forEach(item=>{
+
+        html += `
+
+          <div class="media-card">
+
+            <img
+              src="${safeAttr(item.imageURL)}"
+              alt=""
+            >
+
+            <div class="media-body">
+
+              <h4>
+                ${safeText(item.title || "Website Image")}
+              </h4>
+
+              <p>
+                ${safeText(item.description || "")}
+              </p>
+
+              <div class="media-actions">
+
+                <button
+                  class="admin-btn"
+                  onclick="replaceMedia('${item.id}')"
+                >
+                  Replace
+                </button>
+
+                <button
+                  class="admin-btn red"
+                  onclick="deleteMedia('${item.id}')"
+                >
+                  Delete
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        `;
+
+      });
+
+    html += `</div>`;
+  }
+
+  box.innerHTML = html;
+}
+
+
+function replaceSpecialImage(type){
+
+  const input =
+    document.createElement("input");
+
+  input.type = "file";
+  input.accept = "image/*";
+
+  input.onchange =
+    event =>
+    uploadSpecialImage(
+      event,
+      type
+    );
+
+  input.click();
+}
+
+
+async function uploadSpecialImage(event,type){
+
+  const file =
+    event.target.files[0];
+
+  if(!file)return;
+
+  await uploadFile(
+    file,
+    type,
+    type === "logo"
+      ? "KAYMAN Logo"
+      : type === "hero"
+        ? "KAYMAN Hero Image"
+        : "KAYMAN About Image"
+  );
+}
+
+
+async function uploadGalleryImages(event){
+
+  const files =
+    [...event.target.files];
+
+  if(!files.length)return;
+
+  for(const file of files){
+
+    await uploadFile(
+      file,
+      "gallery",
+      file.name
+    );
+
+  }
+}
+
+
+async function uploadFile(file,type,title){
+
+  if(!adminLoggedIn)return;
+
+  const reader =
+    new FileReader();
+
+  reader.onload =
+    async function(){
+
+      const base64 =
+        reader.result
+          .split(",")[1];
+
+      const result =
+        await apiPost({
+
+          action:"uploadImage",
+
+          password:adminPassword,
+
+          fileData:base64,
+
+          mimeType:file.type,
+
+          fileName:file.name,
+
+          title:title,
+
+          description:"Uploaded from KAYMAN Admin",
+
+          type:type
+
+        });
+
+      if(result.success){
+
+        alert(
+          "Image uploaded successfully."
+        );
+
+        loadAdminData();
+        loadMedia();
+
+      }else{
+
+        alert(
+          result.message ||
+          "Upload failed."
+        );
+      }
+
+    };
+
+  reader.readAsDataURL(file);
+}
+
+
+async function deleteMedia(id){
+
+  if(!confirm(
+    "Delete this image?"
+  ))return;
+
+  const result =
+    await apiPost({
+
+      action:"deleteImage",
+
+      password:adminPassword,
+
+      id:id
+
+    });
+
+  if(result.success){
+
+    await loadMedia();
+    await loadAdminData();
+
+  }else{
+
+    alert(
+      result.message ||
+      "Could not delete image."
+    );
+  }
+}
+
+
+function replaceMedia(id){
+
+  const input =
+    document.createElement("input");
+
+  input.type = "file";
+  input.accept = "image/*";
+
+  input.onchange =
+    async function(event){
+
+      const file =
+        event.target.files[0];
+
+      if(!file)return;
+
+      /*
+        Upload as a new Drive image.
+        The old image can then be deleted from the
+        Media manager. This prevents accidental loss.
+      */
+
+      await uploadFile(
+        file,
+        "gallery",
+        file.name
+      );
+    };
+
+  input.click();
+}
+
+
+/* ===================================================
+   ADMIN PROJECTS
+=================================================== */
+
+function renderAdminProjects(){
+
+  const box =
+    document.getElementById("adminProjectList");
+
+  if(!projectsData.length){
+
+    box.innerHTML =
+      `<div class="empty">No projects added yet.</div>`;
+
+    return;
+  }
+
+  box.innerHTML =
+    projectsData.map(p=>`
+
+      <div class="admin-card">
+
+        <div style="display:flex;gap:15px;flex-wrap:wrap">
+
+          ${
+            p.imageURL
+            ?
+            `
+            <img
+              src="${safeAttr(p.imageURL)}"
+              style="width:150px;height:100px;object-fit:cover;border-radius:8px"
+            >
+            `
+            : ""
+          }
+
+          <div style="flex:1">
+
+            <small style="color:#d7aa52">
+              ${safeText(p.category || "PROJECT")}
+            </small>
+
+            <h3>
+              ${safeText(p.title)}
+            </h3>
+
+            <p style="color:#969da6;font-size:13px">
+              ${safeText(p.description)}
+            </p>
+
+            <br>
+
+            <button
+              class="admin-btn red"
+              onclick="deleteProjectAdmin('${p.id}')"
+            >
+              Delete Project
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    `).join("");
+}
+
+
+async function saveProjectAdmin(event){
+
+  event.preventDefault();
+
+  const form =
+    event.target;
+
+  const title =
+    document.getElementById("projectTitle").value;
+
+  const category =
+    document.getElementById("projectCategory").value;
+
+  const description =
+    document.getElementById("projectDescription").value;
+
+  const imageFile =
+    document.getElementById("projectImage")
+      .files[0];
+
+  if(imageFile){
+
+    const reader =
+      new FileReader();
+
+    reader.onload =
+      async function(){
+
+        const base64 =
+          reader.result
+            .split(",")[1];
+
+        const upload =
+          await apiPost({
+
+            action:"uploadImage",
+
+            password:adminPassword,
+
+            fileData:base64,
+
+            mimeType:imageFile.type,
+
+            fileName:imageFile.name,
+
+            title:title,
+
+            description:description,
+
+            type:"project"
+
+          });
+
+        if(!upload.success){
+
+          alert(
+            upload.message ||
+            "Project image upload failed."
+          );
+
+          return;
+        }
+
+        await saveProjectRecord(
+          title,
+          category,
+          description,
+          upload.imageURL
+        );
+
+      };
+
+    reader.readAsDataURL(imageFile);
+
+  }else{
+
+    await saveProjectRecord(
+      title,
+      category,
+      description,
+      ""
+    );
+  }
+}
+
+
+async function saveProjectRecord(
+  title,
+  category,
+  description,
+  imageURL
+){
+
+  const result =
+    await apiPost({
+
+      action:"saveProject",
+
+      password:adminPassword,
+
+      title:title,
+
+      category:category,
+
+      description:description,
+
+      imageURL:imageURL,
+
+      status:"Published"
+
+    });
+
+  if(result.success){
+
+    alert(
+      "Project published."
+    );
+
+    document.getElementById("projectForm")
+      .reset();
+
+    loadProjects();
+    loadAdminData();
+
+  }else{
+
+    alert(
+      result.message ||
+      "Could not save project."
+    );
+  }
+}
+
+
+async function deleteProjectAdmin(id){
+
+  if(!confirm(
+    "Delete this project?"
+  ))return;
+
+  const result =
+    await apiPost({
+
+      action:"deleteProject",
+
+      password:adminPassword,
+
+      id:id
+
+    });
+
+  if(result.success){
+
+    loadProjects();
+    loadAdminData();
+
+  }else{
+
+    alert(
+      result.message ||
+      "Could not delete project."
+    );
+  }
+}
+
+
+/* ===================================================
+   ADMIN LEADS
+=================================================== */
+
+function renderAdminLeads(rows){
+
+  const box =
+    document.getElementById("leadTable");
+
+  if(!rows || rows.length < 2){
+
+    box.innerHTML =
+      `<div class="empty">No leads yet.</div>`;
+
+    return;
+  }
+
+  let html = `
+    <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>Service</th>
+          <th>Message</th>
+        </tr>
+      </thead>
+      <tbody>
+  `;
+
+  rows.slice(1).forEach(row=>{
+
+    html += `
+      <tr>
+        <td>${safeText(row[1])}</td>
+        <td>${safeText(row[2])}</td>
+        <td>${safeText(row[3])}</td>
+        <td>${safeText(row[4])}</td>
+        <td>${safeText(row[5])}</td>
+        <td>${safeText(row[6])}</td>
+      </tr>
+    `;
+
+  });
+
+  html += `
+      </tbody>
+    </table>
+    </div>
+  `;
+
+  box.innerHTML = html;
+}
+
+
+/* ===================================================
+   ADMIN CHAT LOGS
+=================================================== */
+
+function renderAdminChats(rows){
+
+  const box =
+    document.getElementById("chatTable");
+
+  if(!rows || rows.length < 2){
+
+    box.innerHTML =
+      `<div class="empty">No chatbot conversations yet.</div>`;
+
+    return;
+  }
+
+  let html = `
+    <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Session</th>
+          <th>Visitor Message</th>
+          <th>Bot Reply</th>
+        </tr>
+      </thead>
+      <tbody>
+  `;
+
+  rows.slice(1).forEach(row=>{
+
+    html += `
+      <tr>
+        <td>${safeText(row[1])}</td>
+        <td>${safeText(row[2])}</td>
+        <td>${safeText(row[4])}</td>
+        <td>${safeText(row[5])}</td>
+      </tr>
+    `;
+
+  });
+
+  html += `
+      </tbody>
+    </table>
+    </div>
+  `;
+
+  box.innerHTML = html;
+}
+
+
+/* ===================================================
+   WEBSITE SETTINGS
+=================================================== */
+
+function fillSettings(){
+
+  document.getElementById("setBusinessName")
+    .value =
+    websiteData.businessName || "";
+
+  document.getElementById("setPhone")
+    .value =
+    websiteData.phone || "";
+
+  document.getElementById("setWhatsApp")
+    .value =
+    websiteData.whatsapp || "";
+
+  document.getElementById("setEmail")
+    .value =
+    websiteData.email || "";
+
+  document.getElementById("setAddress")
+    .value =
+    websiteData.address || "";
+
+  document.getElementById("setHeroTitle")
+    .value =
+    websiteData.heroTitle || "";
+
+  document.getElementById("setHeroText")
+    .value =
+    websiteData.heroText || "";
+
+  document.getElementById("setAboutTitle")
+    .value =
+    websiteData.aboutTitle || "";
+
+  document.getElementById("setAboutText")
+    .value =
+    websiteData.aboutText || "";
+}
+
+
+async function saveWebsiteSettings(event){
+
+  event.preventDefault();
+
+  const content = {
+
+    businessName:
+      document.getElementById("setBusinessName").value,
+
+    phone:
+      document.getElementById("setPhone").value,
+
+    whatsapp:
+      document.getElementById("setWhatsApp").value,
+
+    email:
+      document.getElementById("setEmail").value,
+
+    address:
+      document.getElementById("setAddress").value,
+
+    heroTitle:
+      document.getElementById("setHeroTitle").value,
+
+    heroText:
+      document.getElementById("setHeroText").value,
+
+    aboutTitle:
+      document.getElementById("setAboutTitle").value,
+
+    aboutText:
+      document.getElementById("setAboutText").value
+  };
+
+  const result =
+    await apiPost({
+
+      action:"saveContent",
+
+      password:adminPassword,
+
+      content:content
+
+    });
+
+  if(result.success){
+
+    websiteData = {
+      ...websiteData,
+      ...content
+    };
+
+    renderWebsite();
+
+    alert(
+      "Website information updated."
+    );
+
+  }else{
+
+    alert(
+      result.message ||
+      "Could not update website."
+    );
+  }
+}
+
+
+/* ===================================================
+   HTML
+=================================================== */
+
+</script>
+
+
 <header>
-<div class="container nav">
-<a href="#home" class="logo">
-<div class="logoMark"><span>K</span></div>
-<div>KAYMAN<small>CONSTRUCTORS & DEVELOPERS</small></div>
-</a>
-<nav class="navlinks" id="navlinks">
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-<a href="#" class="adminLink" onclick="openAdmin(event)">ADMIN</a>
-</nav>
-<button class="menu" onclick="toggleMenu()">☰</button>
-</div>
+  <div class="container nav" id="navbar">
+
+    <a href="#home" class="logo-wrap">
+
+      <img
+        class="logo-img"
+        alt="KAYMAN logo"
+      >
+
+      <div class="logo-text">
+        KAYMAN<br>
+        <span>CONSTRUCTORS & DEVELOPERS</span>
+      </div>
+
+    </a>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="nav-btn">Request a Quote</a>
+    </nav>
+
+    <button
+      class="menu"
+      onclick="document.getElementById('navbar').classList.toggle('mobile-open')"
+    >
+      ☰
+    </button>
+
+  </div>
 </header>
+
 
 <main>
 
 <section class="hero" id="home">
-<div class="container heroContent">
-<div class="eyebrow">Construction • Development • Engineering</div>
-<h1 id="heroTitle">We Build <span>What Matters.</span></h1>
-<p id="heroDesc">KAYMAN CONSTRUCTORS & DEVELOPERS delivers construction and development solutions designed around quality, durability, functionality and long-term value.</p>
-<div class="buttons">
-<a class="btn goldBtn" href="#contact">Request a Quote</a>
-<a class="btn whatsappBtn" href="https://wa.me/2348029181035" target="_blank">WhatsApp Us</a>
-<a class="btn outlineBtn" href="#projects">View Projects</a>
-</div>
-</div>
+
+  <div class="container">
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        Construction • Development • Project Management
+      </div>
+
+      <h1 id="heroTitle">
+        <span>Building</span> Spaces. Creating Legacies.
+      </h1>
+
+      <p id="heroText">
+        Professional construction and property development solutions
+        delivered with quality, precision and commitment.
+      </p>
+
+      <div class="actions">
+
+        <a
+          href="#contact"
+          class="btn btn-gold"
+        >
+          Start a Project
+        </a>
+
+        <a
+          href="#projects"
+          class="btn btn-outline"
+        >
+          View Projects
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
+
 
 <section class="stats">
-<div class="container statsGrid">
-<div class="stat"><strong>01</strong><span>Construction Partner</span></div>
-<div class="stat"><strong>100%</strong><span>Project Focus</span></div>
-<div class="stat"><strong>24/7</strong><span>Online Enquiries</span></div>
-<div class="stat"><strong>∞</strong><span>Possibilities</span></div>
-</div>
+
+  <div class="container">
+
+    <div class="stats-grid">
+
+      <div class="stat">
+        <strong>01</strong>
+        <span>Professional Approach</span>
+      </div>
+
+      <div class="stat">
+        <strong>02</strong>
+        <span>Quality Construction</span>
+      </div>
+
+      <div class="stat">
+        <strong>03</strong>
+        <span>Project Management</span>
+      </div>
+
+      <div class="stat">
+        <strong>04</strong>
+        <span>Client-Focused Service</span>
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
+
 
 <section id="about">
-<div class="container aboutGrid">
-<div class="aboutImage" id="aboutImage"></div>
-<div class="aboutCopy">
-<div class="sectionHead">
-<div class="eyebrow">Who We Are</div>
-<h2>Built Around <span class="gold">Quality.</span></h2>
-</div>
-<p>KAYMAN CONSTRUCTORS & DEVELOPERS is a modern construction and property development company focused on delivering practical, durable and professionally managed projects.</p>
-<p>From planning through execution, our approach is centred on communication, attention to detail and solutions that create lasting value.</p>
-<div>
-<div class="check"><b>✓</b> Professional project planning</div>
-<div class="check"><b>✓</b> Quality-focused construction</div>
-<div class="check"><b>✓</b> Clear client communication</div>
-<div class="check"><b>✓</b> Long-term value</div>
-</div>
-<a class="btn goldBtn" href="#contact" style="margin-top:20px">Discuss Your Project</a>
-</div>
-</div>
+
+  <div class="container">
+
+    <div class="about-grid">
+
+      <div class="about-image">
+
+        <img
+          id="aboutImage"
+          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=85"
+          alt="Construction project"
+        >
+
+      </div>
+
+      <div class="about-copy">
+
+        <div class="section-head">
+
+          <small>About KAYMAN</small>
+
+          <h2 id="aboutTitle">
+            Built With Purpose
+          </h2>
+
+        </div>
+
+        <p id="aboutText">
+          KAYMAN CONSTRUCTORS & DEVELOPERS provides professional
+          construction and development services for residential,
+          commercial and property projects.
+        </p>
+
+        <div class="check">
+          <b>✓</b>
+          <span>Professional project coordination</span>
+        </div>
+
+        <div class="check">
+          <b>✓</b>
+          <span>Quality-focused construction</span>
+        </div>
+
+        <div class="check">
+          <b>✓</b>
+          <span>Transparent communication</span>
+        </div>
+
+        <div class="check">
+          <b>✓</b>
+          <span>Solutions built around your project</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
 
-<section class="services" id="services">
-<div class="container">
-<div class="sectionHead center">
-<div class="eyebrow">What We Do</div>
-<h2>Our <span class="gold">Services</span></h2>
-<p>Construction and development services tailored to the requirements of each project.</p>
-</div>
-<div class="serviceGrid">
-<div class="service"><div class="icon">⌂</div><h3>Building Construction</h3><p>Residential and commercial building construction.</p></div>
-<div class="service"><div class="icon">▦</div><h3>Property Development</h3><p>Development solutions from concept through delivery.</p></div>
-<div class="service"><div class="icon">⚙</div><h3>Civil Engineering</h3><p>Infrastructure and civil works for project requirements.</p></div>
-<div class="service"><div class="icon">▤</div><h3>Project Management</h3><p>Structured coordination for organised project execution.</p></div>
-<div class="service"><div class="icon">◇</div><h3>Renovation & Remodeling</h3><p>Upgrade and transformation of existing spaces.</p></div>
-<div class="service"><div class="icon">⌖</div><h3>Consultation</h3><p>Discuss your proposed construction or development project.</p></div>
-</div>
-</div>
+
+<section id="services">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <small>What We Do</small>
+
+      <h2>Construction & Development Services</h2>
+
+      <p>
+        From new builds to property development and renovation,
+        KAYMAN can help coordinate the project from concept to completion.
+      </p>
+
+    </div>
+
+    <div class="services-grid">
+
+      <div class="card">
+        <div class="icon">⌂</div>
+        <h3>Building Construction</h3>
+        <p>
+          Residential and commercial construction projects
+          planned around your requirements.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">◆</div>
+        <h3>Property Development</h3>
+        <p>
+          Development solutions for property owners,
+          investors and new projects.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">↗</div>
+        <h3>Project Management</h3>
+        <p>
+          Coordination and oversight designed to keep
+          projects organised.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">⌘</div>
+        <h3>Renovation</h3>
+        <p>
+          Property improvement and renovation projects
+          tailored to existing spaces.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">▦</div>
+        <h3>Real Estate Development</h3>
+        <p>
+          Property development and construction planning
+          for development opportunities.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">✓</div>
+        <h3>Consultation</h3>
+        <p>
+          Discuss your project requirements and determine
+          the next practical steps.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
 
-<section id="projects">
-<div class="container">
-<div class="sectionHead center">
-<div class="eyebrow">Selected Work</div>
-<h2>Project <span class="gold">Showcase</span></h2>
-<p>Projects can be added, replaced and managed directly from the admin panel.</p>
-</div>
-<div class="projectGrid" id="projectGrid"></div>
-</div>
+
+<section class="projects" id="projects">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <small>Our Work</small>
+
+      <h2>Featured Projects</h2>
+
+      <p>
+        Projects added by the KAYMAN administrator appear here automatically.
+      </p>
+
+    </div>
+
+    <div
+      class="project-grid"
+      id="projectGrid"
+    >
+
+      <div
+        class="empty"
+        style="grid-column:1/-1"
+      >
+        Loading projects...
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
 
-<section class="why">
-<div class="container">
-<div class="sectionHead center">
-<div class="eyebrow">The KAYMAN Approach</div>
-<h2>Why Work <span class="gold">With Us?</span></h2>
-</div>
-<div class="whyGrid">
-<div class="whyCard"><strong>Quality Focus</strong><p>Attention to construction quality and project requirements.</p></div>
-<div class="whyCard"><strong>Clear Communication</strong><p>Customers can reach the company directly.</p></div>
-<div class="whyCard"><strong>Project Mindset</strong><p>Each project is approached around its individual objectives.</p></div>
-<div class="whyCard"><strong>Long-Term Value</strong><p>Solutions are designed around durability and usability.</p></div>
-</div>
-</div>
+
+<section>
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <small>Why KAYMAN</small>
+
+      <h2>Built Around the Project</h2>
+
+    </div>
+
+    <div class="why-grid">
+
+      <div class="card">
+        <div class="icon">01</div>
+        <h3>Planning</h3>
+        <p>
+          Projects start with understanding the scope,
+          requirements and objectives.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">02</div>
+        <h3>Quality</h3>
+        <p>
+          A quality-focused approach to construction and
+          project delivery.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">03</div>
+        <h3>Communication</h3>
+        <p>
+          Clear communication helps clients understand
+          what is happening with their project.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">04</div>
+        <h3>Delivery</h3>
+        <p>
+          Practical coordination from project planning
+          through completion.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
+
 
 <section class="cta">
-<div class="container ctaInner">
-<div><h2>Have a Construction Project?</h2><p>Tell KAYMAN what you want to build.</p></div>
-<a class="btn darkBtn" href="#contact">Start an Enquiry</a>
-</div>
+
+  <div class="container">
+
+    <div class="cta-box">
+
+      <h2>
+        Have a Project in Mind?
+      </h2>
+
+      <p>
+        Tell KAYMAN what you are planning and start a conversation
+        about your project.
+      </p>
+
+      <a
+        href="#contact"
+        class="btn btn-gold"
+      >
+        Discuss Your Project
+      </a>
+
+    </div>
+
+  </div>
+
 </section>
 
-<section class="contact" id="contact">
-<div class="container">
-<div class="sectionHead">
-<div class="eyebrow">Contact KAYMAN</div>
-<h2>Let's Discuss <span class="gold">Your Project.</span></h2>
-<p>Send an enquiry and the business can follow up with you.</p>
-</div>
 
-<div class="contactGrid">
-<div class="contactCard">
-<div class="contactItem"><small>PHONE / WHATSAPP</small><a href="tel:+2348029181035">0802 918 1035</a></div>
-<div class="contactItem"><small>WHATSAPP</small><a href="https://wa.me/2348029181035" target="_blank">Chat with KAYMAN</a></div>
-<div class="contactItem"><small>LOCATION</small><span id="locationText">Uyo, Akwa Ibom, Nigeria</span></div>
-<div class="contactItem"><small>BUSINESS HOURS</small><span>Monday – Saturday</span></div>
-</div>
+<section id="contact">
 
-<div class="formCard">
-<form id="leadForm">
-<div class="formGrid">
-<div class="field"><label>Full Name</label><input id="leadName" required></div>
-<div class="field"><label>Phone / WhatsApp</label><input id="leadPhone" required></div>
-<div class="field"><label>Email</label><input id="leadEmail" type="email"></div>
-<div class="field"><label>Project Type</label>
-<select id="leadType">
-<option>Building Construction</option>
-<option>Property Development</option>
-<option>Civil Engineering</option>
-<option>Renovation / Remodeling</option>
-<option>Project Management</option>
-<option>Consultation</option>
-</select>
-</div>
-<div class="field full"><label>Project Details</label><textarea id="leadMessage" required></textarea></div>
-</div>
-<button class="btn goldBtn" type="submit">Send Enquiry</button>
-</form>
-</div>
-</div>
-</div>
+  <div class="container">
+
+    <div class="section-head">
+
+      <small>Get In Touch</small>
+
+      <h2>Let's Discuss Your Project</h2>
+
+      <p>
+        Send your requirements and the KAYMAN team can review your enquiry.
+      </p>
+
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-list">
+
+        <a
+          class="contact-item phone-link"
+          href="tel:08029181035"
+        >
+
+          <small>PHONE</small>
+
+          <p id="contactPhone">
+            0802 918 1035
+          </p>
+
+        </a>
+
+        <a
+          class="contact-item wa-link"
+          href="https://wa.me/2348029181035"
+          target="_blank"
+        >
+
+          <small>WHATSAPP</small>
+
+          <p>
+            Start a WhatsApp conversation
+          </p>
+
+        </a>
+
+        <a
+          class="contact-item email-link"
+          href="#"
+        >
+
+          <small>EMAIL</small>
+
+          <p id="contactEmail">
+            Email available on request
+          </p>
+
+        </a>
+
+        <div class="contact-item">
+
+          <small>LOCATION</small>
+
+          <p id="contactAddress">
+            Uyo, Akwa Ibom, Nigeria
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <form
+        class="form"
+        onsubmit="submitLead(event)"
+      >
+
+        <div class="form-grid">
+
+          <div class="field">
+
+            <label>Your Name</label>
+
+            <input
+              name="name"
+              required
+              placeholder="Full name"
+            >
+
+          </div>
+
+          <div class="field">
+
+            <label>Phone</label>
+
+            <input
+              name="phone"
+              required
+              placeholder="Phone number"
+            >
+
+          </div>
+
+        </div>
+
+        <div class="form-grid">
+
+          <div class="field">
+
+            <label>Email</label>
+
+            <input
+              name="email"
+              type="email"
+              placeholder="Email address"
+            >
+
+          </div>
+
+          <div class="field">
+
+            <label>Service</label>
+
+            <select name="service">
+
+              <option>Building Construction</option>
+              <option>Property Development</option>
+              <option>Renovation</option>
+              <option>Project Management</option>
+              <option>Real Estate Development</option>
+              <option>Consultation</option>
+
+            </select>
+
+          </div>
+
+        </div>
+
+        <div class="field">
+
+          <label>Project Details</label>
+
+          <textarea
+            name="message"
+            required
+            placeholder="Tell us about your project..."
+          ></textarea>
+
+        </div>
+
+        <button
+          class="btn btn-gold"
+          type="submit"
+          style="width:100%"
+        >
+          Send Enquiry
+        </button>
+
+        <div
+          class="success"
+          id="leadSuccess"
+        >
+          Your enquiry has been received.
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
 </section>
 
 </main>
 
+
 <footer>
-<div class="container footer">
-<div><strong>KAYMAN CONSTRUCTORS & DEVELOPERS</strong><p>Construction • Development • Engineering</p><p>© <span id="year"></span> KAYMAN</p></div>
-<div class="footerLinks"><a href="#home">Home</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#contact">Contact</a><a href="#" onclick="openAdmin(event)">Admin</a></div>
-</div>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+
+        <div class="logo-wrap">
+
+          <img
+            class="logo-img"
+            alt="KAYMAN logo"
+          >
+
+          <div class="logo-text">
+            KAYMAN<br>
+            <span>CONSTRUCTORS & DEVELOPERS</span>
+          </div>
+
+        </div>
+
+        <p>
+          Construction and property development solutions
+          designed around your project.
+        </p>
+
+      </div>
+
+      <div>
+
+        <h4>Explore</h4>
+
+        <p>
+          <a href="#about">About</a>
+        </p>
+
+        <p>
+          <a href="#services">Services</a>
+        </p>
+
+        <p>
+          <a href="#projects">Projects</a>
+        </p>
+
+        <p>
+          <a href="#contact">Contact</a>
+        </p>
+
+      </div>
+
+      <div>
+
+        <h4>Contact</h4>
+
+        <p id="footerPhone">
+          0802 918 1035
+        </p>
+
+        <p>
+          Uyo, Akwa Ibom, Nigeria
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      © <span id="year"></span>
+      KAYMAN CONSTRUCTORS & DEVELOPERS.
+      All rights reserved.
+
+    </div>
+
+  </div>
+
 </footer>
 
-<a class="floatWA" href="https://wa.me/2348029181035" target="_blank">☘</a>
-<button class="chatButton" onclick="toggleChat()">✦</button>
 
-<div class="chatbox" id="chatbox">
-<div class="chatHead"><strong>KAYMAN Assistant</strong><button class="chatClose" onclick="toggleChat()">×</button></div>
-<div class="chatMessages" id="chatMessages"><div class="message bot">Hello! I can help with KAYMAN's services, construction enquiries, quotations and contact information.</div></div>
-<div class="chatInput"><input id="chatInput" placeholder="Ask about KAYMAN..." onkeydown="if(event.key==='Enter')sendChat()"><button onclick="sendChat()">➤</button></div>
-</div>
+<!-- FLOATING WHATSAPP -->
 
-
-<!-- ADMIN -->
-
-<div class="modal" id="adminModal">
-<div class="adminWrap">
-
-<div id="adminLogin">
-<div class="login">
-<h2>KAYMAN ADMIN</h2>
-<p>Owner control panel. Enter your administrator password.</p>
-<input class="adminInput" id="adminPassword" type="password" placeholder="Administrator password" onkeydown="if(event.key==='Enter')loginAdmin()">
-<button class="btn goldBtn" style="width:100%" onclick="loginAdmin()">Login</button>
-<button class="btn outlineBtn" style="width:100%;margin-top:10px" onclick="closeAdmin()">Close</button>
-<div id="loginError" style="display:none;color:#ff7777;margin-top:10px">Incorrect password.</div>
-</div>
-</div>
-
-<div id="adminDashboard" class="hidden">
-
-<div class="adminHeader">
-<div><strong>KAYMAN CONTROL CENTER</strong><div style="font-size:12px;color:#777">Website management</div></div>
-<div class="buttons"><button class="btn outlineBtn" onclick="closeAdmin()">Close</button><button class="btn danger" onclick="logoutAdmin()">Logout</button></div>
-</div>
-
-<div class="adminBody">
-
-<aside class="sidebar">
-<button class="tab active" onclick="panel('overview',this)">Overview</button>
-<button class="tab" onclick="panel('media',this)">🖼 Media / Images</button>
-<button class="tab" onclick="panel('content',this)">Website Content</button>
-<button class="tab" onclick="panel('projects',this)">Projects</button>
-<button class="tab" onclick="panel('leads',this)">Leads</button>
-<button class="tab" onclick="panel('chats',this)">Chat Logs</button>
-<button class="tab" onclick="panel('settings',this)">Settings</button>
-</aside>
-
-<div class="adminContent">
-
-<!-- OVERVIEW -->
-<section class="panel active" id="panel-overview">
-<div class="dashboard">
-<div class="dash"><small>Website Visits</small><strong id="dashVisits">0</strong></div>
-<div class="dash"><small>Leads</small><strong id="dashLeads">0</strong></div>
-<div class="dash"><small>Chats</small><strong id="dashChats">0</strong></div>
-<div class="dash"><small>Images</small><strong id="dashImages">0</strong></div>
-</div>
-
-<div class="adminBox">
-<h3>Quick Actions</h3>
-<div class="buttons">
-<button class="btn goldBtn" onclick="openPanel('media')">Manage Images</button>
-<button class="btn outlineBtn" onclick="openPanel('content')">Edit Website</button>
-<button class="btn outlineBtn" onclick="openPanel('projects')">Manage Projects</button>
-<button class="btn outlineBtn" onclick="openPanel('leads')">View Leads</button>
-</div>
-</div>
-</section>
+<a
+  class="whatsapp wa-link"
+  href="https://wa.me/2348029181035"
+  target="_blank"
+  aria-label="WhatsApp"
+>
+  ☎
+</a>
 
 
-<!-- MEDIA MANAGER -->
-<section class="panel" id="panel-media">
+<!-- CHAT BUTTON -->
 
-<div class="adminBox">
-<h3>🖼 Website Image Manager</h3>
+<button
+  class="chat-button"
+  onclick="toggleChat()"
+>
+  💬
+</button>
 
-<p style="color:#aaa;font-size:13px;margin-bottom:18px">
-Here you can replace the main website images or add as many additional
-images as you want. Images uploaded from your phone are stored in this
-browser for the demo.
-</p>
 
-<div class="mediaToolbar">
-<button class="btn goldBtn" onclick="document.getElementById('heroUpload').click()">Replace Hero Image</button>
-<input id="heroUpload" type="file" accept="image/*" hidden onchange="replaceSpecialImage('hero',this.files[0])">
+<!-- CHATBOX -->
 
-<button class="btn goldBtn" onclick="document.getElementById('aboutUpload').click()">Replace About Image</button>
-<input id="aboutUpload" type="file" accept="image/*" hidden onchange="replaceSpecialImage('about',this.files[0])">
+<div
+  class="chatbox"
+  id="chatbox"
+>
 
-<button class="btn outlineBtn" onclick="document.getElementById('newMediaUpload').click()">+ Add New Image</button>
-<input id="newMediaUpload" type="file" accept="image/*" multiple hidden onchange="addMediaImages(this.files)">
-</div>
+  <div class="chat-head">
 
-<div class="adminBox" style="background:#0d0d0d">
-<h3>Current Main Images</h3>
+    <strong>
+      KAYMAN Assistant
+    </strong>
 
-<div class="mediaGrid" id="specialImages"></div>
-</div>
+    <button
+      class="chat-close"
+      onclick="toggleChat()"
+    >
+      ×
+    </button>
+
+  </div>
+
+  <div
+    class="chat-messages"
+    id="chatMessages"
+  >
+
+    <div class="msg bot">
+      Hello. Welcome to KAYMAN CONSTRUCTORS & DEVELOPERS. How can I help you with your project?
+    </div>
+
+  </div>
+
+  <form
+    class="chat-form"
+    onsubmit="sendChat(event)"
+  >
+
+    <input
+      id="chatInput"
+      placeholder="Ask about our services..."
+      autocomplete="off"
+    >
+
+    <button>
+      Send
+    </button>
+
+  </form>
 
 </div>
 
-<div class="adminBox">
-<h3>All Uploaded Images</h3>
-<p class="notice">You can upload multiple images at once. There is no fixed number of images.</p>
-<div class="mediaGrid" id="mediaGrid"></div>
+
+<!-- ==================================================
+     ADMIN OVERLAY
+=================================================== -->
+
+<div
+  class="admin-overlay"
+  id="adminOverlay"
+>
+
+  <!-- LOGIN -->
+
+  <div
+    class="admin-login"
+    id="adminLogin"
+  >
+
+    <div class="login-box">
+
+      <div class="eyebrow">
+        Private Area
+      </div>
+
+      <h2>
+        KAYMAN Admin
+      </h2>
+
+      <p>
+        Sign in to manage website content, images,
+        projects, leads and chatbot conversations.
+      </p>
+
+      <div
+        class="admin-field"
+      >
+
+        <label>
+          Admin Password
+        </label>
+
+        <input
+          id="adminPassword"
+          type="password"
+          placeholder="Enter password"
+          onkeydown="if(event.key==='Enter')adminLogin()"
+        >
+
+      </div>
+
+      <div
+        class="login-error"
+        id="adminError"
+      ></div>
+
+      <button
+        class="admin-btn"
+        style="width:100%"
+        onclick="adminLogin()"
+      >
+        Log In
+      </button>
+
+      <button
+        class="admin-btn dark"
+        style="width:100%;margin-top:10px"
+        onclick="closeAdmin()"
+      >
+        Return to Website
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- ADMIN APP -->
+
+  <div
+    class="admin-app"
+    id="adminApp"
+  >
+
+    <div class="admin-top">
+
+      <div class="admin-brand">
+        KAYMAN <span>ADMIN</span>
+      </div>
+
+      <button
+        class="admin-close"
+        onclick="closeAdmin()"
+      >
+        Exit Admin
+      </button>
+
+    </div>
+
+
+    <div class="admin-layout">
+
+      <aside class="admin-sidebar">
+
+        <button
+          class="admin-tab active"
+          data-tab="overview"
+          onclick="openAdminTab('overview')"
+        >
+          Dashboard
+        </button>
+
+        <button
+          class="admin-tab"
+          data-tab="images"
+          onclick="openAdminTab('images')"
+        >
+          Images & Logo
+        </button>
+
+        <button
+          class="admin-tab"
+          data-tab="projects"
+          onclick="openAdminTab('projects')"
+        >
+          Projects
+        </button>
+
+        <button
+          class="admin-tab"
+          data-tab="leads"
+          onclick="openAdminTab('leads')"
+        >
+          Leads
+        </button>
+
+        <button
+          class="admin-tab"
+          data-tab="chats"
+          onclick="openAdminTab('chats')"
+        >
+          Chat Conversations
+        </button>
+
+        <button
+          class="admin-tab"
+          data-tab="settings"
+          onclick="openAdminTab('settings')"
+        >
+          Website Content
+        </button>
+
+      </aside>
+
+
+      <main class="admin-main">
+
+
+        <!-- OVERVIEW -->
+
+        <section
+          class="admin-section active"
+          id="admin-overview"
+        >
+
+          <div class="admin-title">
+
+            <h2>
+              Dashboard
+            </h2>
+
+            <button
+              class="admin-btn"
+              onclick="loadAdminData()"
+            >
+              Refresh
+            </button>
+
+          </div>
+
+          <div class="notice">
+
+            This dashboard is connected to the Google Apps Script backend
+            when your Web App URL is configured at the top of this HTML.
+
+          </div>
+
+          <div class="admin-grid">
+
+            <div class="admin-stat">
+              <span>Website Visits</span>
+              <strong id="statVisits">0</strong>
+            </div>
+
+            <div class="admin-stat">
+              <span>Leads</span>
+              <strong id="statLeads">0</strong>
+            </div>
+
+            <div class="admin-stat">
+              <span>Chat Messages</span>
+              <strong id="statChats">0</strong>
+            </div>
+
+            <div class="admin-stat">
+              <span>Images</span>
+              <strong id="statImages">0</strong>
+            </div>
+
+          </div>
+
+          <br>
+
+          <div class="admin-card">
+
+            <h3>
+              Website Management
+            </h3>
+
+            <p style="color:#999;font-size:13px">
+              Use the menu to upload the company logo,
+              replace website images, publish projects,
+              view customer enquiries and update website information.
+            </p>
+
+          </div>
+
+        </section>
+
+
+        <!-- IMAGES -->
+
+        <section
+          class="admin-section"
+          id="admin-images"
+        >
+
+          <div class="admin-title">
+
+            <h2>
+              Images & Logo
+            </h2>
+
+          </div>
+
+          <div id="mediaManager"></div>
+
+        </section>
+
+
+        <!-- PROJECTS -->
+
+        <section
+          class="admin-section"
+          id="admin-projects"
+        >
+
+          <div class="admin-title">
+
+            <h2>
+              Projects
+            </h2>
+
+          </div>
+
+          <div class="admin-card">
+
+            <h3>
+              Add New Project
+            </h3>
+
+            <form
+              id="projectForm"
+              onsubmit="saveProjectAdmin(event)"
+            >
+
+              <div class="admin-form-grid">
+
+                <div class="admin-field">
+
+                  <label>
+                    Project Name
+                  </label>
+
+                  <input
+                    id="projectTitle"
+                    required
+                    placeholder="e.g. Luxury Residential Development"
+                  >
+
+                </div>
+
+                <div class="admin-field">
+
+                  <label>
+                    Category
+                  </label>
+
+                  <input
+                    id="projectCategory"
+                    placeholder="Residential / Commercial / Renovation"
+                  >
+
+                </div>
+
+                <div class="admin-field full">
+
+                  <label>
+                    Description
+                  </label>
+
+                  <textarea
+                    id="projectDescription"
+                    placeholder="Describe the project..."
+                  ></textarea>
+
+                </div>
+
+                <div class="admin-field full">
+
+                  <label>
+                    Project Image
+                  </label>
+
+                  <input
+                    id="projectImage"
+                    class="file-input"
+                    type="file"
+                    accept="image/*"
+                  >
+
+                </div>
+
+              </div>
+
+              <button
+                class="admin-btn"
+                type="submit"
+              >
+                Publish Project
+              </button>
+
+            </form>
+
+          </div>
+
+          <div id="adminProjectList"></div>
+
+        </section>
+
+
+        <!-- LEADS -->
+
+        <section
+          class="admin-section"
+          id="admin-leads"
+        >
+
+          <div class="admin-title">
+
+            <h2>
+              Customer Leads
+            </h2>
+
+            <button
+              class="admin-btn"
+              onclick="loadAdminData()"
+            >
+              Refresh
+            </button>
+
+          </div>
+
+          <div class="admin-card">
+
+            <p style="color:#999;font-size:13px;margin-bottom:15px">
+
+              Enquiries submitted through the website
+              are stored in the Google Sheet.
+
+            </p>
+
+            <div id="leadTable"></div>
+
+          </div>
+
+        </section>
+
+
+        <!-- CHATS -->
+
+        <section
+          class="admin-section"
+          id="admin-chats"
+        >
+
+          <div class="admin-title">
+
+            <h2>
+              Chat Conversations
+            </h2>
+
+            <button
+              class="admin-btn"
+              onclick="loadAdminData()"
+            >
+              Refresh
+            </button>
+
+          </div>
+
+          <div class="admin-card">
+
+            <p style="color:#999;font-size:13px;margin-bottom:15px">
+
+              Chatbot conversations are recorded in the
+              Google Sheet when the backend is connected.
+
+            </p>
+
+            <div id="chatTable"></div>
+
+          </div>
+
+        </section>
+
+
+        <!-- WEBSITE CONTENT -->
+
+        <section
+          class="admin-section"
+          id="admin-settings"
+        >
+
+          <div class="admin-title">
+
+            <h2>
+              Website Content
+            </h2>
+
+          </div>
+
+          <div class="admin-card">
+
+            <form
+              onsubmit="saveWebsiteSettings(event)"
+            >
+
+              <div class="admin-form-grid">
+
+                <div class="admin-field">
+
+                  <label>
+                    Business Name
+                  </label>
+
+                  <input
+                    id="setBusinessName"
+                  >
+
+                </div>
+
+                <div class="admin-field">
+
+                  <label>
+                    Phone
+                  </label>
+
+                  <input
+                    id="setPhone"
+                  >
+
+                </div>
+
+                <div class="admin-field">
+
+                  <label>
+                    WhatsApp
+                  </label>
+
+                  <input
+                    id="setWhatsApp"
+                  >
+
+                </div>
+
+                <div class="admin-field">
+
+                  <label>
+                    Email
+                  </label>
+
+                  <input
+                    id="setEmail"
+                  >
+
+                </div>
+
+                <div class="admin-field full">
+
+                  <label>
+                    Address
+                  </label>
+
+                  <input
+                    id="setAddress"
+                  >
+
+                </div>
+
+                <div class="admin-field full">
+
+                  <label>
+                    Hero Heading
+                  </label>
+
+                  <input
+                    id="setHeroTitle"
+                  >
+
+                </div>
+
+                <div class="admin-field full">
+
+                  <label>
+                    Hero Description
+                  </label>
+
+                  <textarea
+                    id="setHeroText"
+                  ></textarea>
+
+                </div>
+
+                <div class="admin-field">
+
+                  <label>
+                    About Heading
+                  </label>
+
+                  <input
+                    id="setAboutTitle"
+                  >
+
+                </div>
+
+                <div class="admin-field full">
+
+                  <label>
+                    About Description
+                  </label>
+
+                  <textarea
+                    id="setAboutText"
+                  ></textarea>
+
+                </div>
+
+              </div>
+
+              <button
+                class="admin-btn"
+                type="submit"
+              >
+                Save Website Changes
+              </button>
+
+            </form>
+
+          </div>
+
+        </section>
+
+
+      </main>
+
+    </div>
+
+  </div>
+
 </div>
 
-</section>
 
-
-<!-- CONTENT -->
-<section class="panel" id="panel-content">
-<div class="adminBox">
-<h3>Website Content</h3>
-<label>Company Name</label>
-<input class="adminInput" id="editName">
-<label>Hero Title</label>
-<input class="adminInput" id="editHero">
-<label>Hero Description</label>
-<textarea class="adminInput" id="editDesc"></textarea>
-<label>Phone</label>
-<input class="adminInput" id="editPhone">
-<label>Location</label>
-<input class="adminInput" id="editLocation">
-<button class="btn goldBtn" onclick="saveContent()">Save Changes</button>
-</div>
-</section>
-
-
-<!-- PROJECTS -->
-<section class="panel" id="panel-projects">
-<div class="adminBox">
-<h3>Add Project</h3>
-<input class="adminInput" id="pName" placeholder="Project name">
-<input class="adminInput" id="pCategory" placeholder="Category">
-<textarea class="adminInput" id="pDescription" placeholder="Project description"></textarea>
-
-<label style="display:block;color:#aaa;font-size:12px;margin-bottom:5px">Project image</label>
-<input class="adminInput" type="file" id="pImage" accept="image/*">
-
-<button class="btn goldBtn" onclick="addProject()">Add Project</button>
-</div>
-
-<div class="adminBox">
-<h3>Existing Projects</h3>
-<div class="projectAdminGrid" id="projectAdminGrid"></div>
-</div>
-</section>
-
-
-<!-- LEADS -->
-<section class="panel" id="panel-leads">
-<div class="adminBox">
-<div style="display:flex;justify-content:space-between;gap:10px">
-<h3>Customer Leads</h3>
-<button class="btn danger" onclick="clearLeads()">Clear All</button>
-</div>
-<div class="tableWrap"><table><thead><tr><th>Date</th><th>Name</th><th>Phone</th><th>Project</th><th>Message</th></tr></thead><tbody id="leadTable"></tbody></table></div>
-</div>
-</section>
-
-
-<!-- CHATS -->
-<section class="panel" id="panel-chats">
-<div class="adminBox">
-<div style="display:flex;justify-content:space-between;gap:10px">
-<h3>Chat Conversations</h3>
-<button class="btn danger" onclick="clearChats()">Clear All</button>
-</div>
-<div class="tableWrap"><table><thead><tr><th>Date</th><th>Visitor</th><th>Assistant</th></tr></thead><tbody id="chatTable"></tbody></table></div>
-</div>
-</section>
-
-
-<!-- SETTINGS -->
-<section class="panel" id="panel-settings">
-<div class="adminBox">
-<h3>Google Apps Script</h3>
-<p style="font-size:13px;color:#999;margin-bottom:12px">Paste your deployed Apps Script Web App URL here to send leads to Google Sheets.</p>
-<input class="adminInput" id="appsUrl" placeholder="https://script.google.com/macros/s/.../exec">
-<button class="btn goldBtn" onclick="saveApps()">Save URL</button>
-</div>
-
-<div class="adminBox">
-<h3>Administrator Password</h3>
-<p style="font-size:13px;color:#999;margin-bottom:12px">Change the demo password here.</p>
-<input class="adminInput" id="newPassword" type="password" placeholder="New admin password">
-<button class="btn goldBtn" onclick="changePassword()">Change Password</button>
-</div>
-
-<div class="adminBox">
-<h3>Data</h3>
-<button class="btn danger" onclick="resetData()">Reset Local Website Data</button>
-</div>
-</section>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
+<!-- HIDDEN ADMIN ACCESS
+     The owner can use the browser address:
+     #admin
+-->
 <script>
-const STORE={
- business:"kayman_business",
- projects:"kayman_projects",
- media:"kayman_media",
- leads:"kayman_leads",
- chats:"kayman_chats",
- visits:"kayman_visits",
- apps:"kayman_apps",
- password:"kayman_password"
-};
 
-const DEFAULT={
- name:"KAYMAN CONSTRUCTORS & DEVELOPERS",
- hero:"We Build What Matters.",
- desc:"KAYMAN CONSTRUCTORS & DEVELOPERS delivers construction and development solutions designed around quality, durability, functionality and long-term value.",
- phone:"0802 918 1035",
- location:"Uyo, Akwa Ibom, Nigeria",
- heroImage:"https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2000&q=85",
- aboutImage:"https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=85"
-};
+/* ===================================================
+   SECRET ADMIN ACCESS
+=================================================== */
 
-let business=JSON.parse(localStorage.getItem(STORE.business)||"null")||DEFAULT;
+function checkAdminHash(){
 
-let projects=JSON.parse(localStorage.getItem(STORE.projects)||"null")||[
-{id:1,name:"Modern Residential Development",category:"Residential",description:"Contemporary building concept focused on modern living.",image:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85"},
-{id:2,name:"Commercial Building Project",category:"Commercial",description:"Modern commercial construction concept.",image:"https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85"},
-{id:3,name:"Construction & Civil Works",category:"Civil Engineering",description:"Infrastructure and construction works.",image:"https://images.unsplash.com/photo-1590725140246-20acdee442be?auto=format&fit=crop&w=1200&q=85"}
-];
+  if(location.hash === "#admin"){
 
-let media=JSON.parse(localStorage.getItem(STORE.media)||"null")||[];
+    setTimeout(
+      openAdmin,
+      100
+    );
 
-let visits=Number(localStorage.getItem(STORE.visits)||0)+1;
-localStorage.setItem(STORE.visits,visits);
-
-function save(){
-localStorage.setItem(STORE.business,JSON.stringify(business));
-localStorage.setItem(STORE.projects,JSON.stringify(projects));
-localStorage.setItem(STORE.media,JSON.stringify(media));
+  }
 }
 
-function leads(){return JSON.parse(localStorage.getItem(STORE.leads)||"[]")}
-function chats(){return JSON.parse(localStorage.getItem(STORE.chats)||"[]")}
-function safe(x){
-return String(x??"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#039;");
-}
+window.addEventListener(
+  "hashchange",
+  checkAdminHash
+);
 
-function renderSite(){
-document.getElementById("heroTitle").innerHTML=safe(business.hero).replace(" "," <span>");
-document.getElementById("heroDesc").textContent=business.desc;
-document.getElementById("locationText").textContent=business.location;
-document.getElementById("aboutImage").style.backgroundImage=`url("${business.aboutImage}")`;
+checkAdminHash();
 
-document.querySelectorAll(".hero").forEach(x=>{
-x.style.backgroundImage=`linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.5),rgba(0,0,0,.82)),url("${business.heroImage}")`;
-});
 
-document.getElementById("projectGrid").innerHTML=projects.map(p=>`
-<article class="project">
-<img src="${safe(p.image)}" alt="${safe(p.name)}">
-<div class="projectInfo"><small>${safe(p.category)}</small><h3>${safe(p.name)}</h3></div>
-</article>`).join("");
-}
+/* ===================================================
+   YEAR
+=================================================== */
 
-function renderAdmin(){
-document.getElementById("dashVisits").textContent=visits;
-document.getElementById("dashLeads").textContent=leads().length;
-document.getElementById("dashChats").textContent=chats().length;
-document.getElementById("dashImages").textContent=media.length;
+document.getElementById("year")
+  .textContent =
+  new Date().getFullYear();
 
-document.getElementById("editName").value=business.name;
-document.getElementById("editHero").value=business.hero;
-document.getElementById("editDesc").value=business.desc;
-document.getElementById("editPhone").value=business.phone;
-document.getElementById("editLocation").value=business.location;
-document.getElementById("appsUrl").value=localStorage.getItem(STORE.apps)||"";
 
-renderSpecialImages();
-renderMedia();
-renderProjectAdmin();
-renderLeads();
-renderChats();
-}
+/* ===================================================
+   START WEBSITE
+=================================================== */
 
-function toggleMenu(){document.getElementById("navlinks").classList.toggle("open")}
-
-function openAdmin(e){
-if(e)e.preventDefault();
-document.getElementById("adminModal").classList.add("show");
-document.getElementById("adminLogin").classList.remove("hidden");
-document.getElementById("adminDashboard").classList.add("hidden");
-}
-
-function closeAdmin(){document.getElementById("adminModal").classList.remove("show")}
-
-function loginAdmin(){
-let saved=localStorage.getItem(STORE.password)||"KAYMAN 2026";
-if(document.getElementById("adminPassword").value===saved){
-document.getElementById("adminLogin").classList.add("hidden");
-document.getElementById("adminDashboard").classList.remove("hidden");
-renderAdmin();
-}else document.getElementById("loginError").style.display="block";
-}
-
-function logoutAdmin(){
-document.getElementById("adminDashboard").classList.add("hidden");
-document.getElementById("adminLogin").classList.remove("hidden");
-}
-
-function panel(name,btn){
-document.querySelectorAll(".panel").forEach(x=>x.classList.remove("active"));
-document.getElementById("panel-"+name).classList.add("active");
-document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));
-if(btn)btn.classList.add("active");
-renderAdmin();
-}
-
-function openPanel(name){
-document.querySelectorAll(".panel").forEach(x=>x.classList.remove("active"));
-document.getElementById("panel-"+name).classList.add("active");
-renderAdmin();
-}
-
-
-/* IMAGE MANAGER */
-
-function fileToData(file,callback){
-if(!file)return;
-const reader=new FileReader();
-reader.onload=()=>callback(reader.result);
-reader.readAsDataURL(file);
-}
-
-function replaceSpecialImage(type,file){
-if(!file)return;
-
-fileToData(file,data=>{
-if(type==="hero")business.heroImage=data;
-if(type==="about")business.aboutImage=data;
-save();
-renderSite();
-renderAdmin();
-alert(type==="hero"?"Hero image replaced successfully.":"About image replaced successfully.");
-});
-}
-
-function renderSpecialImages(){
-
-document.getElementById("specialImages").innerHTML=`
-
-<div class="mediaCard">
-<img src="${safe(business.heroImage)}">
-<div class="mediaBody">
-<strong>Hero Image</strong>
-<small>Main image at the top of the website.</small>
-<div class="mediaActions">
-<button onclick="document.getElementById('heroUpload').click()">Replace</button>
-</div>
-</div>
-</div>
-
-<div class="mediaCard">
-<img src="${safe(business.aboutImage)}">
-<div class="mediaBody">
-<strong>About Image</strong>
-<small>Main About Us image.</small>
-<div class="mediaActions">
-<button onclick="document.getElementById('aboutUpload').click()">Replace</button>
-</div>
-</div>
-</div>`;
-}
-
-function addMediaImages(files){
-
-if(!files||!files.length)return;
-
-let remaining=files.length;
-
-[...files].forEach(file=>{
-fileToData(file,data=>{
-media.push({
-id:Date.now()+Math.random(),
-title:file.name.replace(/\.[^/.]+$/,""),
-description:"",
-image:data
-});
-remaining--;
-if(remaining===0){
-save();
-renderAdmin();
-alert(files.length+" image(s) added to your Media Manager.");
-}
-});
-});
-}
-
-function renderMedia(){
-
-const grid=document.getElementById("mediaGrid");
-
-if(!media.length){
-grid.innerHTML="<p style='color:#777'>No additional images uploaded yet. Tap '+ Add New Image' to upload images from your phone.</p>";
-return;
-}
-
-grid.innerHTML=media.map(m=>`
-<div class="mediaCard">
-<img src="${safe(m.image)}">
-<div class="mediaBody">
-<strong>${safe(m.title)}</strong>
-<small>${safe(m.description||"No description")}</small>
-
-<div class="mediaActions">
-<button onclick="editMedia('${m.id}')">Edit</button>
-<button onclick="replaceMedia('${m.id}')">Replace</button>
-<button onclick="deleteMedia('${m.id}')" style="color:#ff7777">Delete</button>
-</div>
-</div>
-</div>`).join("");
-}
-
-function editMedia(id){
-
-let m=media.find(x=>String(x.id)===String(id));
-if(!m)return;
-
-let title=prompt("Image title:",m.title);
-if(title===null)return;
-
-let description=prompt("Image description:",m.description||"");
-if(description===null)return;
-
-m.title=title;
-m.description=description;
-
-save();
-renderAdmin();
-}
-
-function replaceMedia(id){
-
-let input=document.createElement("input");
-input.type="file";
-input.accept="image/*";
-
-input.onchange=()=>{
-let file=input.files[0];
-if(!file)return;
-
-fileToData(file,data=>{
-let m=media.find(x=>String(x.id)===String(id));
-if(!m)return;
-
-m.image=data;
-save();
-renderAdmin();
-alert("Image replaced successfully.");
-});
-};
-
-input.click();
-}
-
-function deleteMedia(id){
-
-if(!confirm("Delete this image?"))return;
-
-media=media.filter(x=>String(x.id)!==String(id));
-save();
-renderAdmin();
-}
-
-
-/* CONTENT */
-
-function saveContent(){
-
-business.name=document.getElementById("editName").value.trim();
-business.hero=document.getElementById("editHero").value.trim();
-business.desc=document.getElementById("editDesc").value.trim();
-business.phone=document.getElementById("editPhone").value.trim();
-business.location=document.getElementById("editLocation").value.trim();
-
-save();
-renderSite();
-alert("Website content updated.");
-}
-
-
-/* PROJECTS */
-
-function addProject(){
-
-let name=document.getElementById("pName").value.trim();
-let category=document.getElementById("pCategory").value.trim();
-let description=document.getElementById("pDescription").value.trim();
-let file=document.getElementById("pImage").files[0];
-
-if(!name||!category){
-alert("Enter the project name and category.");
-return;
-}
-
-const finish=image=>{
-projects.unshift({
-id:Date.now(),
-name,category,description,
-image:image||"https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=85"
-});
-save();
-renderSite();
-renderAdmin();
-document.getElementById("pName").value="";
-document.getElementById("pCategory").value="";
-document.getElementById("pDescription").value="";
-document.getElementById("pImage").value="";
-alert("Project added.");
-};
-
-if(file)fileToData(file,finish);
-else finish();
-}
-
-function renderProjectAdmin(){
-
-let box=document.getElementById("projectAdminGrid");
-
-box.innerHTML=projects.map(p=>`
-<div class="projectAdmin">
-<img src="${safe(p.image)}">
-<strong>${safe(p.name)}</strong>
-<div style="font-size:11px;color:#888">${safe(p.category)}</div>
-<p style="font-size:11px;color:#888;margin-top:5px">${safe(p.description)}</p>
-<button class="btn danger" style="width:100%;padding:8px;margin-top:8px" onclick="deleteProject(${p.id})">Delete</button>
-</div>`).join("");
-}
-
-function deleteProject(id){
-if(!confirm("Delete this project?"))return;
-projects=projects.filter(p=>p.id!==id);
-save();
-renderSite();
-renderAdmin();
-}
-
-
-/* LEADS */
-
-document.getElementById("leadForm").addEventListener("submit",async e=>{
-e.preventDefault();
-
-let lead={
-date:new Date().toLocaleString(),
-name:document.getElementById("leadName").value,
-phone:document.getElementById("leadPhone").value,
-email:document.getElementById("leadEmail").value,
-type:document.getElementById("leadType").value,
-message:document.getElementById("leadMessage").value
-};
-
-let arr=leads();
-arr.unshift(lead);
-localStorage.setItem(STORE.leads,JSON.stringify(arr));
-
-let url=localStorage.getItem(STORE.apps);
-if(url){
-try{
-fetch(url,{method:"POST",mode:"no-cors",headers:{"Content-Type":"application/json"},body:JSON.stringify(lead)});
-}catch(err){}
-}
-
-let text=`Hello KAYMAN CONSTRUCTORS & DEVELOPERS.%0A%0AName: ${encodeURIComponent(lead.name)}%0APhone: ${encodeURIComponent(lead.phone)}%0AProject: ${encodeURIComponent(lead.type)}%0ADetails: ${encodeURIComponent(lead.message)}`;
-
-alert("Enquiry saved. WhatsApp will open now.");
-window.open("https://wa.me/2348029181035?text="+text,"_blank");
-e.target.reset();
-});
-
-
-function renderLeads(){
-let data=leads();
-document.getElementById("leadTable").innerHTML=data.length?data.map(x=>`
-<tr><td>${safe(x.date)}</td><td>${safe(x.name)}</td><td>${safe(x.phone)}</td><td>${safe(x.type)}</td><td>${safe(x.message)}</td></tr>`).join(""):`<tr><td colspan="5">No leads yet.</td></tr>`;
-}
-
-function clearLeads(){
-if(!confirm("Clear all leads?"))return;
-localStorage.removeItem(STORE.leads);
-renderAdmin();
-}
-
-
-/* CHATBOT */
-
-function toggleChat(){document.getElementById("chatbox").classList.toggle("open")}
-
-function addMessage(text,type){
-let d=document.createElement("div");
-d.className="message "+type;
-d.textContent=text;
-let box=document.getElementById("chatMessages");
-box.appendChild(d);
-box.scrollTop=box.scrollHeight;
-}
-
-function botReply(q){
-
-q=q.toLowerCase();
-
-if(q.includes("hello")||q.includes("hi")||q.includes("hey"))
-return"Hello! Welcome to KAYMAN CONSTRUCTORS & DEVELOPERS. How can I help you?";
-
-if(q.includes("service"))
-return"KAYMAN offers building construction, property development, civil engineering, project management, renovation/remodeling and consultation.";
-
-if(q.includes("price")||q.includes("cost")||q.includes("quote"))
-return"Project cost depends on the scope and requirements. Send your project details through the enquiry form or WhatsApp 0802 918 1035.";
-
-if(q.includes("contact")||q.includes("phone")||q.includes("whatsapp"))
-return"You can contact KAYMAN on WhatsApp or phone at 0802 918 1035.";
-
-if(q.includes("location")||q.includes("where"))
-return" KAYMAN is listed in Uyo, Akwa Ibom, Nigeria.";
-
-if(q.includes("renov"))
-return"Yes, renovation and remodeling enquiries can be submitted through the website.";
-
-return"I can help with KAYMAN's services, projects, quotations, construction enquiries and contact information. You can also WhatsApp 0802 918 1035.";
-}
-
-function sendChat(){
-
-let input=document.getElementById("chatInput");
-let q=input.value.trim();
-if(!q)return;
-
-addMessage(q,"user");
-input.value="";
-
-let reply=botReply(q);
-
-setTimeout(()=>{
-
-addMessage(reply,"bot");
-
-let arr=chats();
-arr.push({date:new Date().toLocaleString(),user:q,assistant:reply});
-localStorage.setItem(STORE.chats,JSON.stringify(arr));
-
-},250);
-}
-
-function renderChats(){
-
-let data=chats();
-
-document.getElementById("chatTable").innerHTML=data.length?data.slice().reverse().map(x=>`
-<tr><td>${safe(x.date)}</td><td>${safe(x.user)}</td><td>${safe(x.assistant)}</td></tr>`).join(""):`<tr><td colspan="3">No conversations yet.</td></tr>`;
-}
-
-function clearChats(){
-if(!confirm("Clear all chat logs?"))return;
-localStorage.removeItem(STORE.chats);
-renderAdmin();
-}
-
-
-/* SETTINGS */
-
-function saveApps(){
-localStorage.setItem(STORE.apps,document.getElementById("appsUrl").value.trim());
-alert("Apps Script URL saved.");
-}
-
-function changePassword(){
-
-let p=document.getElementById("newPassword").value.trim();
-
-if(p.length<6){
-alert("Use at least 6 characters.");
-return;
-}
-
-localStorage.setItem(STORE.password,p);
-document.getElementById("newPassword").value="";
-alert("Administrator password changed.");
-}
-
-function resetData(){
-
-if(!confirm("This will remove locally stored leads, chats, projects, images and visitor data. Continue?"))return;
-
-Object.values(STORE).forEach(k=>localStorage.removeItem(k));
-location.reload();
-}
-
-
-/* INITIALISE */
-
-document.getElementById("year").textContent=new Date().getFullYear();
-renderSite();
-renderAdmin();
+loadWebsite();
 
 </script>
+
 </body>
-                                                                                                                   </html>
+ </html>
